@@ -1,0 +1,289 @@
+ERROR:root:testmoped
+ERROR:__main__:Exception Datetime: 06-03-2024 05:19:08 PM
+ERROR:__main__:Exception Type: <class 'FileNotFoundError'>
+ERROR:__main__:Exception Value: [Errno 2] No such file or directory: 'error.csv'
+ERROR:__main__:File Name: C:\Users\eha\PycharmProjects\Hausarbeit\.venv\Lib\site-packages\pandas\io\common.py
+ERROR:__main__:Line Number: 873
+ERROR:__main__:Procedure Name: get_handle
+ERROR:__main__:Line Code: handle = open(
+ERROR:root:testmoped
+ERROR:__main__:Exception Datetime: 06-03-2024 05:19:20 PM
+ERROR:__main__:Exception Type: <class 'FileNotFoundError'>
+ERROR:__main__:Exception Value: [Errno 2] No such file or directory: 'error.csv'
+ERROR:__main__:File Name: C:\Users\eha\PycharmProjects\Hausarbeit\.venv\Lib\site-packages\pandas\io\common.py
+ERROR:__main__:Line Number: 873
+ERROR:__main__:Procedure Name: get_handle
+ERROR:__main__:Line Code: handle = open(
+ERROR:__main__:Exception Datetime: 06-03-2024 05:43:23 PM
+ERROR:__main__:Exception Type: <class 'FileNotFoundError'>
+ERROR:__main__:Exception Value: [Errno 2] No such file or directory: 'error.csv'
+ERROR:__main__:File Name: C:\Users\eha\PycharmProjects\Hausarbeit\.venv\Lib\site-packages\pandas\io\common.py
+ERROR:__main__:Line Number: 873
+ERROR:__main__:Procedure Name: get_handle
+ERROR:__main__:Line Code: handle = open(
+ERROR:__main__:Exception Datetime: 06-03-2024 05:44:15 PM
+ERROR:__main__:Exception Type: <class 'FileNotFoundError'>
+ERROR:__main__:Exception Value: [Errno 2] No such file or directory: 'error.csv'
+ERROR:__main__:File Name: C:\Users\eha\PycharmProjects\Hausarbeit\.venv\Lib\site-packages\pandas\io\common.py
+ERROR:__main__:Line Number: 873
+ERROR:__main__:Procedure Name: get_handle
+ERROR:__main__:Line Code: handle = open(
+ERROR:__main__:Exception Datetime: 06-03-2024 05:44:58 PM
+ERROR:__main__:Exception Type: <class 'FileNotFoundError'>
+ERROR:__main__:Exception Value: [Errno 2] No such file or directory: 'error.csv'
+ERROR:__main__:File Name: C:\Users\eha\PycharmProjects\Hausarbeit\.venv\Lib\site-packages\pandas\io\common.py
+ERROR:__main__:Line Number: 873
+ERROR:__main__:Procedure Name: get_handle
+ERROR:__main__:Line Code: handle = open(
+ERROR:__main__:Exception Datetime: 06-03-2024 05:45:46 PM
+ERROR:__main__:Exception Type: <class 'FileNotFoundError'>
+ERROR:__main__:Exception Value: [Errno 2] No such file or directory: 'error.csv'
+ERROR:__main__:File Name: C:\Users\eha\PycharmProjects\Hausarbeit\.venv\Lib\site-packages\pandas\io\common.py
+ERROR:__main__:Line Number: 873
+ERROR:__main__:Procedure Name: get_handle
+ERROR:__main__:Line Code: handle = open(
+ERROR:__main__:Exception Datetime: 06-03-2024 05:48:54 PM
+ERROR:__main__:Exception Type: <class 'FileNotFoundError'>
+ERROR:__main__:Exception Value: [Errno 2] No such file or directory: 'error.csv'
+ERROR:__main__:File Name: C:\Users\eha\PycharmProjects\Hausarbeit\.venv\Lib\site-packages\pandas\io\common.py
+ERROR:__main__:Line Number: 873
+ERROR:__main__:Procedure Name: get_handle
+ERROR:__main__:Line Code: handle = open(
+ERROR:__main__:Exception Datetime: 08-03-2024 05:23:31 PM
+ERROR:__main__:Exception Type: <class 'FileNotFoundError'>
+ERROR:__main__:Exception Value: [Errno 2] No such file or directory: 'error.csv'
+ERROR:__main__:File Name: C:\Users\eha\PycharmProjects\Hausarbeit\.venv\Lib\site-packages\pandas\io\common.py
+ERROR:__main__:Line Number: 873
+ERROR:__main__:Procedure Name: get_handle
+ERROR:__main__:Line Code: handle = open(
+ERROR:__main__:Exception Datetime: 08-03-2024 05:47:07 PM
+ERROR:__main__:Exception Type: <class 'FileNotFoundError'>
+ERROR:__main__:Exception Value: [Errno 2] No such file or directory: 'error.csv'
+ERROR:__main__:File Name: C:\Users\eha\PycharmProjects\Hausarbeit\.venv\Lib\site-packages\pandas\io\common.py
+ERROR:__main__:Line Number: 873
+ERROR:__main__:Procedure Name: get_handle
+ERROR:__main__:Line Code: handle = open(
+ERROR:__main__:Exception Datetime: 09-03-2024 03:06:22 PM
+ERROR:__main__:Exception Type: <class 'FileNotFoundError'>
+ERROR:__main__:Exception Value: [Errno 2] No such file or directory: 'error.csv'
+ERROR:__main__:File Name: C:\Users\eha\PycharmProjects\Hausarbeit\.venv\Lib\site-packages\pandas\io\common.py
+ERROR:__main__:Line Number: 873
+ERROR:__main__:Procedure Name: get_handle
+ERROR:__main__:Line Code: handle = open(
+ERROR:__main__:Exception Datetime: 09-03-2024 03:06:57 PM
+ERROR:__main__:Exception Type: <class 'FileNotFoundError'>
+ERROR:__main__:Exception Value: [Errno 2] No such file or directory: 'error.csv'
+ERROR:__main__:File Name: C:\Users\eha\PycharmProjects\Hausarbeit\.venv\Lib\site-packages\pandas\io\common.py
+ERROR:__main__:Line Number: 873
+ERROR:__main__:Procedure Name: get_handle
+ERROR:__main__:Line Code: handle = open(
+ERROR:__main__:Exception Datetime: 09-03-2024 03:09:15 PM
+ERROR:__main__:Exception Type: <class 'FileNotFoundError'>
+ERROR:__main__:Exception Value: [Errno 2] No such file or directory: 'error.csv'
+ERROR:__main__:File Name: C:\Users\eha\PycharmProjects\Hausarbeit\.venv\Lib\site-packages\pandas\io\common.py
+ERROR:__main__:Line Number: 873
+ERROR:__main__:Procedure Name: get_handle
+ERROR:__main__:Line Code: handle = open(
+ERROR:__main__:Exception Datetime: 09-03-2024 03:43:28 PM
+ERROR:__main__:Exception Type: <class 'FileNotFoundError'>
+ERROR:__main__:Exception Value: [Errno 2] No such file or directory: 'error.csv'
+ERROR:__main__:File Name: C:\Users\eha\PycharmProjects\Hausarbeit\.venv\Lib\site-packages\pandas\io\common.py
+ERROR:__main__:Line Number: 873
+ERROR:__main__:Procedure Name: get_handle
+ERROR:__main__:Line Code: handle = open(
+ERROR:__main__:Exception Datetime: 09-03-2024 03:43:52 PM
+ERROR:__main__:Exception Type: <class 'FileNotFoundError'>
+ERROR:__main__:Exception Value: [Errno 2] No such file or directory: 'error.csv'
+ERROR:__main__:File Name: C:\Users\eha\PycharmProjects\Hausarbeit\.venv\Lib\site-packages\pandas\io\common.py
+ERROR:__main__:Line Number: 873
+ERROR:__main__:Procedure Name: get_handle
+ERROR:__main__:Line Code: handle = open(
+ERROR:__main__:Exception Datetime: 09-03-2024 03:52:35 PM
+ERROR:__main__:Exception Type: <class 'FileNotFoundError'>
+ERROR:__main__:Exception Value: [Errno 2] No such file or directory: 'error.csv'
+ERROR:__main__:File Name: C:\Users\eha\PycharmProjects\Hausarbeit\.venv\Lib\site-packages\pandas\io\common.py
+ERROR:__main__:Line Number: 873
+ERROR:__main__:Procedure Name: get_handle
+ERROR:__main__:Line Code: handle = open(
+ERROR:__main__:Exception Datetime: 09-03-2024 03:52:54 PM
+ERROR:__main__:Exception Type: <class 'FileNotFoundError'>
+ERROR:__main__:Exception Value: [Errno 2] No such file or directory: 'error.csv'
+ERROR:__main__:File Name: C:\Users\eha\PycharmProjects\Hausarbeit\.venv\Lib\site-packages\pandas\io\common.py
+ERROR:__main__:Line Number: 873
+ERROR:__main__:Procedure Name: get_handle
+ERROR:__main__:Line Code: handle = open(
+ERROR:__main__:Exception Datetime: 09-03-2024 03:53:12 PM
+ERROR:__main__:Exception Type: <class 'FileNotFoundError'>
+ERROR:__main__:Exception Value: [Errno 2] No such file or directory: 'error.csv'
+ERROR:__main__:File Name: C:\Users\eha\PycharmProjects\Hausarbeit\.venv\Lib\site-packages\pandas\io\common.py
+ERROR:__main__:Line Number: 873
+ERROR:__main__:Procedure Name: get_handle
+ERROR:__main__:Line Code: handle = open(
+ERROR:__main__:Exception Datetime: 09-03-2024 03:53:37 PM
+ERROR:__main__:Exception Type: <class 'FileNotFoundError'>
+ERROR:__main__:Exception Value: [Errno 2] No such file or directory: 'error.csv'
+ERROR:__main__:File Name: C:\Users\eha\PycharmProjects\Hausarbeit\.venv\Lib\site-packages\pandas\io\common.py
+ERROR:__main__:Line Number: 873
+ERROR:__main__:Procedure Name: get_handle
+ERROR:__main__:Line Code: handle = open(
+ERROR:__main__:Exception Datetime: 09-03-2024 03:54:22 PM
+ERROR:__main__:Exception Type: <class 'FileNotFoundError'>
+ERROR:__main__:Exception Value: [Errno 2] No such file or directory: 'error.csv'
+ERROR:__main__:File Name: C:\Users\eha\PycharmProjects\Hausarbeit\.venv\Lib\site-packages\pandas\io\common.py
+ERROR:__main__:Line Number: 873
+ERROR:__main__:Procedure Name: get_handle
+ERROR:__main__:Line Code: handle = open(
+ERROR:__main__:Exception Datetime: 09-03-2024 03:54:28 PM
+ERROR:__main__:Exception Type: <class 'FileNotFoundError'>
+ERROR:__main__:Exception Value: [Errno 2] No such file or directory: 'error.csv'
+ERROR:__main__:File Name: C:\Users\eha\PycharmProjects\Hausarbeit\.venv\Lib\site-packages\pandas\io\common.py
+ERROR:__main__:Line Number: 873
+ERROR:__main__:Procedure Name: get_handle
+ERROR:__main__:Line Code: handle = open(
+ERROR:__main__:Exception Datetime: 09-03-2024 03:55:46 PM
+ERROR:__main__:Exception Type: <class 'FileNotFoundError'>
+ERROR:__main__:Exception Value: [Errno 2] No such file or directory: 'error.csv'
+ERROR:__main__:File Name: C:\Users\eha\PycharmProjects\Hausarbeit\.venv\Lib\site-packages\pandas\io\common.py
+ERROR:__main__:Line Number: 873
+ERROR:__main__:Procedure Name: get_handle
+ERROR:__main__:Line Code: handle = open(
+ERROR:__main__:Exception Datetime: 09-03-2024 05:12:18 PM
+ERROR:__main__:Exception Type: <class 'FileNotFoundError'>
+ERROR:__main__:Exception Value: [Errno 2] No such file or directory: 'error.csv'
+ERROR:__main__:File Name: C:\Users\eha\PycharmProjects\Hausarbeit\.venv\Lib\site-packages\pandas\io\common.py
+ERROR:__main__:Line Number: 873
+ERROR:__main__:Procedure Name: get_handle
+ERROR:__main__:Line Code: handle = open(
+ERROR:__main__:Exception Datetime: 09-03-2024 05:20:00 PM
+ERROR:__main__:Exception Type: <class 'FileNotFoundError'>
+ERROR:__main__:Exception Value: [Errno 2] No such file or directory: 'error.csv'
+ERROR:__main__:File Name: C:\Users\eha\PycharmProjects\Hausarbeit\.venv\Lib\site-packages\pandas\io\common.py
+ERROR:__main__:Line Number: 873
+ERROR:__main__:Procedure Name: get_handle
+ERROR:__main__:Line Code: handle = open(
+ERROR:__main__:Exception Datetime: 09-03-2024 05:20:48 PM
+ERROR:__main__:Exception Type: <class 'FileNotFoundError'>
+ERROR:__main__:Exception Value: [Errno 2] No such file or directory: 'error.csv'
+ERROR:__main__:File Name: C:\Users\eha\PycharmProjects\Hausarbeit\.venv\Lib\site-packages\pandas\io\common.py
+ERROR:__main__:Line Number: 873
+ERROR:__main__:Procedure Name: get_handle
+ERROR:__main__:Line Code: handle = open(
+ERROR:__main__:Exception Datetime: 09-03-2024 05:22:05 PM
+ERROR:__main__:Exception Type: <class 'FileNotFoundError'>
+ERROR:__main__:Exception Value: [Errno 2] No such file or directory: 'error.csv'
+ERROR:__main__:File Name: C:\Users\eha\PycharmProjects\Hausarbeit\.venv\Lib\site-packages\pandas\io\common.py
+ERROR:__main__:Line Number: 873
+ERROR:__main__:Procedure Name: get_handle
+ERROR:__main__:Line Code: handle = open(
+ERROR:__main__:Exception Datetime: 09-03-2024 05:22:57 PM
+ERROR:__main__:Exception Type: <class 'FileNotFoundError'>
+ERROR:__main__:Exception Value: [Errno 2] No such file or directory: 'error.csv'
+ERROR:__main__:File Name: C:\Users\eha\PycharmProjects\Hausarbeit\.venv\Lib\site-packages\pandas\io\common.py
+ERROR:__main__:Line Number: 873
+ERROR:__main__:Procedure Name: get_handle
+ERROR:__main__:Line Code: handle = open(
+ERROR:__main__:Exception Datetime: 09-03-2024 05:23:39 PM
+ERROR:__main__:Exception Type: <class 'FileNotFoundError'>
+ERROR:__main__:Exception Value: [Errno 2] No such file or directory: 'error.csv'
+ERROR:__main__:File Name: C:\Users\eha\PycharmProjects\Hausarbeit\.venv\Lib\site-packages\pandas\io\common.py
+ERROR:__main__:Line Number: 873
+ERROR:__main__:Procedure Name: get_handle
+ERROR:__main__:Line Code: handle = open(
+ERROR:__main__:Exception Datetime: 09-03-2024 05:30:33 PM
+ERROR:__main__:Exception Type: <class 'FileNotFoundError'>
+ERROR:__main__:Exception Value: [Errno 2] No such file or directory: 'error.csv'
+ERROR:__main__:File Name: C:\Users\eha\PycharmProjects\Hausarbeit\.venv\Lib\site-packages\pandas\io\common.py
+ERROR:__main__:Line Number: 873
+ERROR:__main__:Procedure Name: get_handle
+ERROR:__main__:Line Code: handle = open(
+ERROR:__main__:Exception Datetime: 09-03-2024 05:30:52 PM
+ERROR:__main__:Exception Type: <class 'FileNotFoundError'>
+ERROR:__main__:Exception Value: [Errno 2] No such file or directory: 'error.csv'
+ERROR:__main__:File Name: C:\Users\eha\PycharmProjects\Hausarbeit\.venv\Lib\site-packages\pandas\io\common.py
+ERROR:__main__:Line Number: 873
+ERROR:__main__:Procedure Name: get_handle
+ERROR:__main__:Line Code: handle = open(
+ERROR:__main__:Exception Datetime: 09-03-2024 05:32:08 PM
+ERROR:__main__:Exception Type: <class 'FileNotFoundError'>
+ERROR:__main__:Exception Value: [Errno 2] No such file or directory: 'error.csv'
+ERROR:__main__:File Name: C:\Users\eha\PycharmProjects\Hausarbeit\.venv\Lib\site-packages\pandas\io\common.py
+ERROR:__main__:Line Number: 873
+ERROR:__main__:Procedure Name: get_handle
+ERROR:__main__:Line Code: handle = open(
+ERROR:__main__:Exception Datetime: 09-03-2024 06:08:10 PM
+ERROR:__main__:Exception Type: <class 'ValueError'>
+ERROR:__main__:Exception Value: Table 'ideal_data' already exists.
+ERROR:__main__:File Name: C:\Users\eha\PycharmProjects\Hausarbeit\.venv\Lib\site-packages\pandas\io\sql.py
+ERROR:__main__:Line Number: 986
+ERROR:__main__:Procedure Name: create
+ERROR:__main__:Line Code: raise ValueError(f"Table '{self.name}' already exists.")
+ERROR:__main__:Exception Datetime: 09-03-2024 06:08:13 PM
+ERROR:__main__:Exception Type: <class 'ValueError'>
+ERROR:__main__:Exception Value: Table 'ideal_data' already exists.
+ERROR:__main__:File Name: C:\Users\eha\PycharmProjects\Hausarbeit\.venv\Lib\site-packages\pandas\io\sql.py
+ERROR:__main__:Line Number: 986
+ERROR:__main__:Procedure Name: create
+ERROR:__main__:Line Code: raise ValueError(f"Table '{self.name}' already exists.")
+ERROR:__main__:Exception Datetime: 09-03-2024 06:08:13 PM
+ERROR:__main__:Exception Type: <class 'ValueError'>
+ERROR:__main__:Exception Value: Table 'train_data' already exists.
+ERROR:__main__:File Name: C:\Users\eha\PycharmProjects\Hausarbeit\.venv\Lib\site-packages\pandas\io\sql.py
+ERROR:__main__:Line Number: 986
+ERROR:__main__:Procedure Name: create
+ERROR:__main__:Line Code: raise ValueError(f"Table '{self.name}' already exists.")
+ERROR:__main__:Exception Datetime: 09-03-2024 06:10:51 PM
+ERROR:__main__:Exception Type: <class 'ValueError'>
+ERROR:__main__:Exception Value: Table 'ideal_data' already exists.
+ERROR:__main__:File Name: C:\Users\eha\PycharmProjects\Hausarbeit\.venv\Lib\site-packages\pandas\io\sql.py
+ERROR:__main__:Line Number: 986
+ERROR:__main__:Procedure Name: create
+ERROR:__main__:Line Code: raise ValueError(f"Table '{self.name}' already exists.")
+ERROR:__main__:Exception Datetime: 09-03-2024 06:10:51 PM
+ERROR:__main__:Exception Type: <class 'ValueError'>
+ERROR:__main__:Exception Value: Table 'train_data' already exists.
+ERROR:__main__:File Name: C:\Users\eha\PycharmProjects\Hausarbeit\.venv\Lib\site-packages\pandas\io\sql.py
+ERROR:__main__:Line Number: 986
+ERROR:__main__:Procedure Name: create
+ERROR:__main__:Line Code: raise ValueError(f"Table '{self.name}' already exists.")
+ERROR:__main__:Exception Datetime: 09-03-2024 06:13:55 PM
+ERROR:__main__:Exception Type: <class 'ValueError'>
+ERROR:__main__:Exception Value: Table 'ideal_data' already exists.
+ERROR:__main__:File Name: C:\Users\eha\PycharmProjects\Hausarbeit\.venv\Lib\site-packages\pandas\io\sql.py
+ERROR:__main__:Line Number: 986
+ERROR:__main__:Procedure Name: create
+ERROR:__main__:Line Code: raise ValueError(f"Table '{self.name}' already exists.")
+ERROR:__main__:Exception Datetime: 09-03-2024 06:13:55 PM
+ERROR:__main__:Exception Type: <class 'ValueError'>
+ERROR:__main__:Exception Value: Table 'train_data' already exists.
+ERROR:__main__:File Name: C:\Users\eha\PycharmProjects\Hausarbeit\.venv\Lib\site-packages\pandas\io\sql.py
+ERROR:__main__:Line Number: 986
+ERROR:__main__:Procedure Name: create
+ERROR:__main__:Line Code: raise ValueError(f"Table '{self.name}' already exists.")
+ERROR:__main__:Exception Datetime: 09-03-2024 06:14:40 PM
+ERROR:__main__:Exception Type: <class 'ValueError'>
+ERROR:__main__:Exception Value: Table 'ideal_data' already exists.
+ERROR:__main__:File Name: C:\Users\eha\PycharmProjects\Hausarbeit\.venv\Lib\site-packages\pandas\io\sql.py
+ERROR:__main__:Line Number: 986
+ERROR:__main__:Procedure Name: create
+ERROR:__main__:Line Code: raise ValueError(f"Table '{self.name}' already exists.")
+ERROR:__main__:Exception Datetime: 09-03-2024 06:14:40 PM
+ERROR:__main__:Exception Type: <class 'ValueError'>
+ERROR:__main__:Exception Value: Table 'train_data' already exists.
+ERROR:__main__:File Name: C:\Users\eha\PycharmProjects\Hausarbeit\.venv\Lib\site-packages\pandas\io\sql.py
+ERROR:__main__:Line Number: 986
+ERROR:__main__:Procedure Name: create
+ERROR:__main__:Line Code: raise ValueError(f"Table '{self.name}' already exists.")
+ERROR:__main__:Exception Datetime: 10-03-2024 02:35:43 PM
+ERROR:__main__:Exception Type: <class 'ValueError'>
+ERROR:__main__:Exception Value: Table 'ideal_data' already exists.
+ERROR:__main__:File Name: C:\Users\eha\PycharmProjects\Hausarbeit\.venv\Lib\site-packages\pandas\io\sql.py
+ERROR:__main__:Line Number: 986
+ERROR:__main__:Procedure Name: create
+ERROR:__main__:Line Code: raise ValueError(f"Table '{self.name}' already exists.")
+ERROR:__main__:Exception Datetime: 10-03-2024 02:35:43 PM
+ERROR:__main__:Exception Type: <class 'ValueError'>
+ERROR:__main__:Exception Value: Table 'train_data' already exists.
+ERROR:__main__:File Name: C:\Users\eha\PycharmProjects\Hausarbeit\.venv\Lib\site-packages\pandas\io\sql.py
+ERROR:__main__:Line Number: 986
+ERROR:__main__:Procedure Name: create
+ERROR:__main__:Line Code: raise ValueError(f"Table '{self.name}' already exists.")
