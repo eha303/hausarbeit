@@ -287,3 +287,17 @@ ERROR:__main__:File Name: C:\Users\eha\PycharmProjects\Hausarbeit\.venv\Lib\site
 ERROR:__main__:Line Number: 986
 ERROR:__main__:Procedure Name: create
 ERROR:__main__:Line Code: raise ValueError(f"Table '{self.name}' already exists.")
+ERROR:__main__:Exception Datetime: 10-03-2024 04:52:19 PM
+ERROR:__main__:Exception Type: <class 'ValueError'>
+ERROR:__main__:Exception Value: Table 'ideal_data' already exists.
+ERROR:__main__:File Name: C:\Users\eha\.conda\envs\Hausarbeit\lib\site-packages\pandas\io\sql.py
+ERROR:__main__:Line Number: 905
+ERROR:__main__:Procedure Name: create
+ERROR:__main__:Line Code: raise ValueError(f"Table '{self.name}' already exists.")
+ERROR:__main__:Exception Datetime: 10-03-2024 04:52:19 PM
+ERROR:__main__:Exception Type: <class 'ValueError'>
+ERROR:__main__:Exception Value: Table 'train_data' already exists.
+ERROR:__main__:File Name: C:\Users\eha\.conda\envs\Hausarbeit\lib\site-packages\pandas\io\sql.py
+ERROR:__main__:Line Number: 905
+ERROR:__main__:Procedure Name: create
+ERROR:__main__:Line Code: raise ValueError(f"Table '{self.name}' already exists.")
