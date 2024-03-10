@@ -329,3 +329,297 @@ ERROR:__main__:File Name: C:\Users\eha\.conda\envs\Hausarbeit\lib\site-packages\
 ERROR:__main__:Line Number: 905
 ERROR:__main__:Procedure Name: create
 ERROR:__main__:Line Code: raise ValueError(f"Table '{self.name}' already exists.")
+ERROR:__main__:Exception Datetime: 10-03-2024 07:17:05 PM
+ERROR:__main__:Exception Type: <class 'ValueError'>
+ERROR:__main__:Exception Value: Table 'ideal_data' already exists.
+ERROR:__main__:File Name: C:\Users\eha\.conda\envs\Hausarbeit\lib\site-packages\pandas\io\sql.py
+ERROR:__main__:Line Number: 905
+ERROR:__main__:Procedure Name: create
+ERROR:__main__:Line Code: raise ValueError(f"Table '{self.name}' already exists.")
+ERROR:__main__:Exception Datetime: 10-03-2024 07:17:05 PM
+ERROR:__main__:Exception Type: <class 'ValueError'>
+ERROR:__main__:Exception Value: Table 'train_data' already exists.
+ERROR:__main__:File Name: C:\Users\eha\.conda\envs\Hausarbeit\lib\site-packages\pandas\io\sql.py
+ERROR:__main__:Line Number: 905
+ERROR:__main__:Procedure Name: create
+ERROR:__main__:Line Code: raise ValueError(f"Table '{self.name}' already exists.")
+ERROR:__main__:Exception Datetime: 10-03-2024 07:17:33 PM
+ERROR:__main__:Exception Type: <class 'ValueError'>
+ERROR:__main__:Exception Value: Table 'ideal_data' already exists.
+ERROR:__main__:File Name: C:\Users\eha\.conda\envs\Hausarbeit\lib\site-packages\pandas\io\sql.py
+ERROR:__main__:Line Number: 905
+ERROR:__main__:Procedure Name: create
+ERROR:__main__:Line Code: raise ValueError(f"Table '{self.name}' already exists.")
+ERROR:__main__:Exception Datetime: 10-03-2024 07:17:33 PM
+ERROR:__main__:Exception Type: <class 'ValueError'>
+ERROR:__main__:Exception Value: Table 'train_data' already exists.
+ERROR:__main__:File Name: C:\Users\eha\.conda\envs\Hausarbeit\lib\site-packages\pandas\io\sql.py
+ERROR:__main__:Line Number: 905
+ERROR:__main__:Procedure Name: create
+ERROR:__main__:Line Code: raise ValueError(f"Table '{self.name}' already exists.")
+ERROR:__main__:Exception Datetime: 10-03-2024 07:18:13 PM
+ERROR:__main__:Exception Type: <class 'ValueError'>
+ERROR:__main__:Exception Value: Table 'ideal_data' already exists.
+ERROR:__main__:File Name: C:\Users\eha\.conda\envs\Hausarbeit\lib\site-packages\pandas\io\sql.py
+ERROR:__main__:Line Number: 905
+ERROR:__main__:Procedure Name: create
+ERROR:__main__:Line Code: raise ValueError(f"Table '{self.name}' already exists.")
+ERROR:__main__:Exception Datetime: 10-03-2024 07:18:13 PM
+ERROR:__main__:Exception Type: <class 'ValueError'>
+ERROR:__main__:Exception Value: Table 'train_data' already exists.
+ERROR:__main__:File Name: C:\Users\eha\.conda\envs\Hausarbeit\lib\site-packages\pandas\io\sql.py
+ERROR:__main__:Line Number: 905
+ERROR:__main__:Procedure Name: create
+ERROR:__main__:Line Code: raise ValueError(f"Table '{self.name}' already exists.")
+ERROR:__main__:Exception Datetime: 10-03-2024 07:18:45 PM
+ERROR:__main__:Exception Type: <class 'ValueError'>
+ERROR:__main__:Exception Value: Table 'ideal_data' already exists.
+ERROR:__main__:File Name: C:\Users\eha\.conda\envs\Hausarbeit\lib\site-packages\pandas\io\sql.py
+ERROR:__main__:Line Number: 905
+ERROR:__main__:Procedure Name: create
+ERROR:__main__:Line Code: raise ValueError(f"Table '{self.name}' already exists.")
+ERROR:__main__:Exception Datetime: 10-03-2024 07:18:45 PM
+ERROR:__main__:Exception Type: <class 'ValueError'>
+ERROR:__main__:Exception Value: Table 'train_data' already exists.
+ERROR:__main__:File Name: C:\Users\eha\.conda\envs\Hausarbeit\lib\site-packages\pandas\io\sql.py
+ERROR:__main__:Line Number: 905
+ERROR:__main__:Procedure Name: create
+ERROR:__main__:Line Code: raise ValueError(f"Table '{self.name}' already exists.")
+ERROR:__main__:Exception Datetime: 10-03-2024 07:19:15 PM
+ERROR:__main__:Exception Type: <class 'ValueError'>
+ERROR:__main__:Exception Value: Table 'ideal_data' already exists.
+ERROR:__main__:File Name: C:\Users\eha\.conda\envs\Hausarbeit\lib\site-packages\pandas\io\sql.py
+ERROR:__main__:Line Number: 905
+ERROR:__main__:Procedure Name: create
+ERROR:__main__:Line Code: raise ValueError(f"Table '{self.name}' already exists.")
+ERROR:__main__:Exception Datetime: 10-03-2024 07:19:15 PM
+ERROR:__main__:Exception Type: <class 'ValueError'>
+ERROR:__main__:Exception Value: Table 'train_data' already exists.
+ERROR:__main__:File Name: C:\Users\eha\.conda\envs\Hausarbeit\lib\site-packages\pandas\io\sql.py
+ERROR:__main__:Line Number: 905
+ERROR:__main__:Procedure Name: create
+ERROR:__main__:Line Code: raise ValueError(f"Table '{self.name}' already exists.")
+ERROR:__main__:Exception Datetime: 10-03-2024 07:19:31 PM
+ERROR:__main__:Exception Type: <class 'ValueError'>
+ERROR:__main__:Exception Value: Table 'ideal_data' already exists.
+ERROR:__main__:File Name: C:\Users\eha\.conda\envs\Hausarbeit\lib\site-packages\pandas\io\sql.py
+ERROR:__main__:Line Number: 905
+ERROR:__main__:Procedure Name: create
+ERROR:__main__:Line Code: raise ValueError(f"Table '{self.name}' already exists.")
+ERROR:__main__:Exception Datetime: 10-03-2024 07:19:31 PM
+ERROR:__main__:Exception Type: <class 'ValueError'>
+ERROR:__main__:Exception Value: Table 'train_data' already exists.
+ERROR:__main__:File Name: C:\Users\eha\.conda\envs\Hausarbeit\lib\site-packages\pandas\io\sql.py
+ERROR:__main__:Line Number: 905
+ERROR:__main__:Procedure Name: create
+ERROR:__main__:Line Code: raise ValueError(f"Table '{self.name}' already exists.")
+ERROR:__main__:Exception Datetime: 10-03-2024 07:19:43 PM
+ERROR:__main__:Exception Type: <class 'ValueError'>
+ERROR:__main__:Exception Value: Table 'ideal_data' already exists.
+ERROR:__main__:File Name: C:\Users\eha\.conda\envs\Hausarbeit\lib\site-packages\pandas\io\sql.py
+ERROR:__main__:Line Number: 905
+ERROR:__main__:Procedure Name: create
+ERROR:__main__:Line Code: raise ValueError(f"Table '{self.name}' already exists.")
+ERROR:__main__:Exception Datetime: 10-03-2024 07:19:43 PM
+ERROR:__main__:Exception Type: <class 'ValueError'>
+ERROR:__main__:Exception Value: Table 'train_data' already exists.
+ERROR:__main__:File Name: C:\Users\eha\.conda\envs\Hausarbeit\lib\site-packages\pandas\io\sql.py
+ERROR:__main__:Line Number: 905
+ERROR:__main__:Procedure Name: create
+ERROR:__main__:Line Code: raise ValueError(f"Table '{self.name}' already exists.")
+ERROR:__main__:Exception Datetime: 10-03-2024 07:19:54 PM
+ERROR:__main__:Exception Type: <class 'ValueError'>
+ERROR:__main__:Exception Value: Table 'ideal_data' already exists.
+ERROR:__main__:File Name: C:\Users\eha\.conda\envs\Hausarbeit\lib\site-packages\pandas\io\sql.py
+ERROR:__main__:Line Number: 905
+ERROR:__main__:Procedure Name: create
+ERROR:__main__:Line Code: raise ValueError(f"Table '{self.name}' already exists.")
+ERROR:__main__:Exception Datetime: 10-03-2024 07:19:54 PM
+ERROR:__main__:Exception Type: <class 'ValueError'>
+ERROR:__main__:Exception Value: Table 'train_data' already exists.
+ERROR:__main__:File Name: C:\Users\eha\.conda\envs\Hausarbeit\lib\site-packages\pandas\io\sql.py
+ERROR:__main__:Line Number: 905
+ERROR:__main__:Procedure Name: create
+ERROR:__main__:Line Code: raise ValueError(f"Table '{self.name}' already exists.")
+ERROR:__main__:Exception Datetime: 10-03-2024 07:20:06 PM
+ERROR:__main__:Exception Type: <class 'ValueError'>
+ERROR:__main__:Exception Value: Table 'ideal_data' already exists.
+ERROR:__main__:File Name: C:\Users\eha\.conda\envs\Hausarbeit\lib\site-packages\pandas\io\sql.py
+ERROR:__main__:Line Number: 905
+ERROR:__main__:Procedure Name: create
+ERROR:__main__:Line Code: raise ValueError(f"Table '{self.name}' already exists.")
+ERROR:__main__:Exception Datetime: 10-03-2024 07:20:06 PM
+ERROR:__main__:Exception Type: <class 'ValueError'>
+ERROR:__main__:Exception Value: Table 'train_data' already exists.
+ERROR:__main__:File Name: C:\Users\eha\.conda\envs\Hausarbeit\lib\site-packages\pandas\io\sql.py
+ERROR:__main__:Line Number: 905
+ERROR:__main__:Procedure Name: create
+ERROR:__main__:Line Code: raise ValueError(f"Table '{self.name}' already exists.")
+ERROR:__main__:Exception Datetime: 10-03-2024 07:20:16 PM
+ERROR:__main__:Exception Type: <class 'ValueError'>
+ERROR:__main__:Exception Value: Table 'ideal_data' already exists.
+ERROR:__main__:File Name: C:\Users\eha\.conda\envs\Hausarbeit\lib\site-packages\pandas\io\sql.py
+ERROR:__main__:Line Number: 905
+ERROR:__main__:Procedure Name: create
+ERROR:__main__:Line Code: raise ValueError(f"Table '{self.name}' already exists.")
+ERROR:__main__:Exception Datetime: 10-03-2024 07:20:16 PM
+ERROR:__main__:Exception Type: <class 'ValueError'>
+ERROR:__main__:Exception Value: Table 'train_data' already exists.
+ERROR:__main__:File Name: C:\Users\eha\.conda\envs\Hausarbeit\lib\site-packages\pandas\io\sql.py
+ERROR:__main__:Line Number: 905
+ERROR:__main__:Procedure Name: create
+ERROR:__main__:Line Code: raise ValueError(f"Table '{self.name}' already exists.")
+ERROR:__main__:Exception Datetime: 10-03-2024 07:20:20 PM
+ERROR:__main__:Exception Type: <class 'ValueError'>
+ERROR:__main__:Exception Value: Table 'ideal_data' already exists.
+ERROR:__main__:File Name: C:\Users\eha\.conda\envs\Hausarbeit\lib\site-packages\pandas\io\sql.py
+ERROR:__main__:Line Number: 905
+ERROR:__main__:Procedure Name: create
+ERROR:__main__:Line Code: raise ValueError(f"Table '{self.name}' already exists.")
+ERROR:__main__:Exception Datetime: 10-03-2024 07:20:20 PM
+ERROR:__main__:Exception Type: <class 'ValueError'>
+ERROR:__main__:Exception Value: Table 'train_data' already exists.
+ERROR:__main__:File Name: C:\Users\eha\.conda\envs\Hausarbeit\lib\site-packages\pandas\io\sql.py
+ERROR:__main__:Line Number: 905
+ERROR:__main__:Procedure Name: create
+ERROR:__main__:Line Code: raise ValueError(f"Table '{self.name}' already exists.")
+ERROR:__main__:Exception Datetime: 10-03-2024 07:20:31 PM
+ERROR:__main__:Exception Type: <class 'ValueError'>
+ERROR:__main__:Exception Value: Table 'ideal_data' already exists.
+ERROR:__main__:File Name: C:\Users\eha\.conda\envs\Hausarbeit\lib\site-packages\pandas\io\sql.py
+ERROR:__main__:Line Number: 905
+ERROR:__main__:Procedure Name: create
+ERROR:__main__:Line Code: raise ValueError(f"Table '{self.name}' already exists.")
+ERROR:__main__:Exception Datetime: 10-03-2024 07:20:31 PM
+ERROR:__main__:Exception Type: <class 'ValueError'>
+ERROR:__main__:Exception Value: Table 'train_data' already exists.
+ERROR:__main__:File Name: C:\Users\eha\.conda\envs\Hausarbeit\lib\site-packages\pandas\io\sql.py
+ERROR:__main__:Line Number: 905
+ERROR:__main__:Procedure Name: create
+ERROR:__main__:Line Code: raise ValueError(f"Table '{self.name}' already exists.")
+ERROR:__main__:Exception Datetime: 10-03-2024 07:21:03 PM
+ERROR:__main__:Exception Type: <class 'ValueError'>
+ERROR:__main__:Exception Value: Table 'ideal_data' already exists.
+ERROR:__main__:File Name: C:\Users\eha\.conda\envs\Hausarbeit\lib\site-packages\pandas\io\sql.py
+ERROR:__main__:Line Number: 905
+ERROR:__main__:Procedure Name: create
+ERROR:__main__:Line Code: raise ValueError(f"Table '{self.name}' already exists.")
+ERROR:__main__:Exception Datetime: 10-03-2024 07:21:03 PM
+ERROR:__main__:Exception Type: <class 'ValueError'>
+ERROR:__main__:Exception Value: Table 'train_data' already exists.
+ERROR:__main__:File Name: C:\Users\eha\.conda\envs\Hausarbeit\lib\site-packages\pandas\io\sql.py
+ERROR:__main__:Line Number: 905
+ERROR:__main__:Procedure Name: create
+ERROR:__main__:Line Code: raise ValueError(f"Table '{self.name}' already exists.")
+ERROR:__main__:Exception Datetime: 10-03-2024 07:21:09 PM
+ERROR:__main__:Exception Type: <class 'ValueError'>
+ERROR:__main__:Exception Value: Table 'ideal_data' already exists.
+ERROR:__main__:File Name: C:\Users\eha\.conda\envs\Hausarbeit\lib\site-packages\pandas\io\sql.py
+ERROR:__main__:Line Number: 905
+ERROR:__main__:Procedure Name: create
+ERROR:__main__:Line Code: raise ValueError(f"Table '{self.name}' already exists.")
+ERROR:__main__:Exception Datetime: 10-03-2024 07:21:09 PM
+ERROR:__main__:Exception Type: <class 'ValueError'>
+ERROR:__main__:Exception Value: Table 'train_data' already exists.
+ERROR:__main__:File Name: C:\Users\eha\.conda\envs\Hausarbeit\lib\site-packages\pandas\io\sql.py
+ERROR:__main__:Line Number: 905
+ERROR:__main__:Procedure Name: create
+ERROR:__main__:Line Code: raise ValueError(f"Table '{self.name}' already exists.")
+ERROR:__main__:Exception Datetime: 10-03-2024 07:21:23 PM
+ERROR:__main__:Exception Type: <class 'ValueError'>
+ERROR:__main__:Exception Value: Table 'ideal_data' already exists.
+ERROR:__main__:File Name: C:\Users\eha\.conda\envs\Hausarbeit\lib\site-packages\pandas\io\sql.py
+ERROR:__main__:Line Number: 905
+ERROR:__main__:Procedure Name: create
+ERROR:__main__:Line Code: raise ValueError(f"Table '{self.name}' already exists.")
+ERROR:__main__:Exception Datetime: 10-03-2024 07:21:23 PM
+ERROR:__main__:Exception Type: <class 'ValueError'>
+ERROR:__main__:Exception Value: Table 'train_data' already exists.
+ERROR:__main__:File Name: C:\Users\eha\.conda\envs\Hausarbeit\lib\site-packages\pandas\io\sql.py
+ERROR:__main__:Line Number: 905
+ERROR:__main__:Procedure Name: create
+ERROR:__main__:Line Code: raise ValueError(f"Table '{self.name}' already exists.")
+ERROR:__main__:Exception Datetime: 10-03-2024 07:21:43 PM
+ERROR:__main__:Exception Type: <class 'ValueError'>
+ERROR:__main__:Exception Value: Table 'ideal_data' already exists.
+ERROR:__main__:File Name: C:\Users\eha\.conda\envs\Hausarbeit\lib\site-packages\pandas\io\sql.py
+ERROR:__main__:Line Number: 905
+ERROR:__main__:Procedure Name: create
+ERROR:__main__:Line Code: raise ValueError(f"Table '{self.name}' already exists.")
+ERROR:__main__:Exception Datetime: 10-03-2024 07:21:43 PM
+ERROR:__main__:Exception Type: <class 'ValueError'>
+ERROR:__main__:Exception Value: Table 'train_data' already exists.
+ERROR:__main__:File Name: C:\Users\eha\.conda\envs\Hausarbeit\lib\site-packages\pandas\io\sql.py
+ERROR:__main__:Line Number: 905
+ERROR:__main__:Procedure Name: create
+ERROR:__main__:Line Code: raise ValueError(f"Table '{self.name}' already exists.")
+ERROR:__main__:Exception Datetime: 10-03-2024 07:21:51 PM
+ERROR:__main__:Exception Type: <class 'ValueError'>
+ERROR:__main__:Exception Value: Table 'ideal_data' already exists.
+ERROR:__main__:File Name: C:\Users\eha\.conda\envs\Hausarbeit\lib\site-packages\pandas\io\sql.py
+ERROR:__main__:Line Number: 905
+ERROR:__main__:Procedure Name: create
+ERROR:__main__:Line Code: raise ValueError(f"Table '{self.name}' already exists.")
+ERROR:__main__:Exception Datetime: 10-03-2024 07:21:51 PM
+ERROR:__main__:Exception Type: <class 'ValueError'>
+ERROR:__main__:Exception Value: Table 'train_data' already exists.
+ERROR:__main__:File Name: C:\Users\eha\.conda\envs\Hausarbeit\lib\site-packages\pandas\io\sql.py
+ERROR:__main__:Line Number: 905
+ERROR:__main__:Procedure Name: create
+ERROR:__main__:Line Code: raise ValueError(f"Table '{self.name}' already exists.")
+ERROR:__main__:Exception Datetime: 10-03-2024 07:22:13 PM
+ERROR:__main__:Exception Type: <class 'ValueError'>
+ERROR:__main__:Exception Value: Table 'ideal_data' already exists.
+ERROR:__main__:File Name: C:\Users\eha\.conda\envs\Hausarbeit\lib\site-packages\pandas\io\sql.py
+ERROR:__main__:Line Number: 905
+ERROR:__main__:Procedure Name: create
+ERROR:__main__:Line Code: raise ValueError(f"Table '{self.name}' already exists.")
+ERROR:__main__:Exception Datetime: 10-03-2024 07:22:13 PM
+ERROR:__main__:Exception Type: <class 'ValueError'>
+ERROR:__main__:Exception Value: Table 'train_data' already exists.
+ERROR:__main__:File Name: C:\Users\eha\.conda\envs\Hausarbeit\lib\site-packages\pandas\io\sql.py
+ERROR:__main__:Line Number: 905
+ERROR:__main__:Procedure Name: create
+ERROR:__main__:Line Code: raise ValueError(f"Table '{self.name}' already exists.")
+ERROR:__main__:Exception Datetime: 10-03-2024 07:22:58 PM
+ERROR:__main__:Exception Type: <class 'ValueError'>
+ERROR:__main__:Exception Value: Table 'ideal_data' already exists.
+ERROR:__main__:File Name: C:\Users\eha\.conda\envs\Hausarbeit\lib\site-packages\pandas\io\sql.py
+ERROR:__main__:Line Number: 905
+ERROR:__main__:Procedure Name: create
+ERROR:__main__:Line Code: raise ValueError(f"Table '{self.name}' already exists.")
+ERROR:__main__:Exception Datetime: 10-03-2024 07:22:58 PM
+ERROR:__main__:Exception Type: <class 'ValueError'>
+ERROR:__main__:Exception Value: Table 'train_data' already exists.
+ERROR:__main__:File Name: C:\Users\eha\.conda\envs\Hausarbeit\lib\site-packages\pandas\io\sql.py
+ERROR:__main__:Line Number: 905
+ERROR:__main__:Procedure Name: create
+ERROR:__main__:Line Code: raise ValueError(f"Table '{self.name}' already exists.")
+ERROR:__main__:Exception Datetime: 10-03-2024 07:23:43 PM
+ERROR:__main__:Exception Type: <class 'ValueError'>
+ERROR:__main__:Exception Value: Table 'ideal_data' already exists.
+ERROR:__main__:File Name: C:\Users\eha\.conda\envs\Hausarbeit\lib\site-packages\pandas\io\sql.py
+ERROR:__main__:Line Number: 905
+ERROR:__main__:Procedure Name: create
+ERROR:__main__:Line Code: raise ValueError(f"Table '{self.name}' already exists.")
+ERROR:__main__:Exception Datetime: 10-03-2024 07:23:43 PM
+ERROR:__main__:Exception Type: <class 'ValueError'>
+ERROR:__main__:Exception Value: Table 'train_data' already exists.
+ERROR:__main__:File Name: C:\Users\eha\.conda\envs\Hausarbeit\lib\site-packages\pandas\io\sql.py
+ERROR:__main__:Line Number: 905
+ERROR:__main__:Procedure Name: create
+ERROR:__main__:Line Code: raise ValueError(f"Table '{self.name}' already exists.")
+ERROR:__main__:Exception Datetime: 10-03-2024 07:23:50 PM
+ERROR:__main__:Exception Type: <class 'ValueError'>
+ERROR:__main__:Exception Value: Table 'ideal_data' already exists.
+ERROR:__main__:File Name: C:\Users\eha\.conda\envs\Hausarbeit\lib\site-packages\pandas\io\sql.py
+ERROR:__main__:Line Number: 905
+ERROR:__main__:Procedure Name: create
+ERROR:__main__:Line Code: raise ValueError(f"Table '{self.name}' already exists.")
+ERROR:__main__:Exception Datetime: 10-03-2024 07:23:50 PM
+ERROR:__main__:Exception Type: <class 'ValueError'>
+ERROR:__main__:Exception Value: Table 'train_data' already exists.
+ERROR:__main__:File Name: C:\Users\eha\.conda\envs\Hausarbeit\lib\site-packages\pandas\io\sql.py
+ERROR:__main__:Line Number: 905
+ERROR:__main__:Procedure Name: create
+ERROR:__main__:Line Code: raise ValueError(f"Table '{self.name}' already exists.")

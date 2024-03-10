@@ -1,6 +1,8 @@
 import logging
 import traceback
 from datetime import datetime
+from matplotlib import pyplot as plt
+from matplotlib import style
 
 
 class DataSet:
@@ -8,6 +10,17 @@ class DataSet:
         self.name = name
         self.dataframe = dataframe
         self.number_of_columns = 4
+
+    def visualize_data(self, x, y):
+        x_list = self.dataframe[x].tolist()
+        y_list = self.dataframe[y].tolist()
+        style.use('ggplot')
+        fig, ax = plt.subplots(figsize=(10, 6))
+        ax.plot(x_list, y_list, label=y, linewidth=2)
+        ax.legend()
+        ax.grid(True, color="k")
+        plt.title(self.name + ' Function ' + y)
+        plt.show()
 
 
 class DataSetWithDatabaseFunctions(DataSet):
@@ -35,7 +48,7 @@ class DataSetWithDatabaseFunctions(DataSet):
             logger.error("Procedure Name: %s", procedure_name)
             logger.error("Line Code: %s", line_code)
             # return None to make clear no data has been loaded
-            database_success = False
+            self.database_success = False
 
         finally:
             return self.database_success

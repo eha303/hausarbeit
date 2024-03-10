@@ -6,7 +6,6 @@ import pandas as pd
 from database import DataBase
 from data import DataSetWithDatabaseFunctions
 
-
 def load_data_from_file(filename):
     try:
         # try to load data into dataframe and return it
@@ -78,3 +77,5 @@ if __name__ == '__main__':
     else:
         print("Train Data NOT stored in Database. Table already exists.\
         Probably you ran the program already and tables have been created.")
+
+    train_data_set.visualize_data('x', 'y4')
