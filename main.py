@@ -1,11 +1,10 @@
-import os
 import traceback
 import logging
 from datetime import datetime
 from sys import exc_info
 import pandas as pd
 from database import DataBase
-from data import DataSet
+from data import DataSetWithDatabaseFunctions
 
 
 def load_data_from_file(filename):
@@ -43,7 +42,7 @@ if __name__ == '__main__':
         print("Testdata not loaded. File test.csv not found.")
     else:
         # create new object from class DataSet
-        test_data_set = DataSet('TestData', test_data)
+        test_data_set = DataSetWithDatabaseFunctions('TestData', test_data)
         # set the correct number of columns for this dataframe
         test_data_set.number_of_columns = len(test_data.columns)
         print("Testdata loaded.")
@@ -52,7 +51,7 @@ if __name__ == '__main__':
         print("Ideal Data not loaded. File ideal.csv not found.")
     else:
         # create new object from class DataSet
-        ideal_data_set = DataSet('IdealData', ideal_data)
+        ideal_data_set = DataSetWithDatabaseFunctions('IdealData', ideal_data)
         # set the correct number of columns for this dataframe
         ideal_data_set.number_of_columns = len(ideal_data.columns)
         print("Ideal Data loaded.")
@@ -61,7 +60,7 @@ if __name__ == '__main__':
         print("Train Data not loaded. File train.csv not found.")
     else:
         # create new object from class DataSet
-        train_data_set = DataSet('TrainData', train_data)
+        train_data_set = DataSetWithDatabaseFunctions('TrainData', train_data)
         # set the correct number of columns for this dataframe
         train_data_set.number_of_columns = len(train_data.columns)
         print("Train Data loaded.")
