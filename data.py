@@ -95,14 +95,18 @@ class DataSet:
         # than the previous one, store this function as the probably best
         # fitting one.
         least_squared_distance = 0
+        max_distance = 0
         for c in dataframe_columns:
             sum_of_squared_distances = 0
+            temp_max_distance = 0
             if c != 'x':
                 #print('now checking ' + c)
                 y_column = self.dataframe[c].tolist()
                 i = 0
                 while i < len(y_column):
                     distance = y_column[i] - y_values[i]
+                    if distance > temp_max_distance:
+                        temp_max_distance = distance
                     squared_distance = distance * distance
                     sum_of_squared_distances += squared_distance
                     i += 1
@@ -111,6 +115,7 @@ class DataSet:
                     #print('_least squared distance is actually: ', least_squared_distance)
                     least_squared_distance = sum_of_squared_distances
                     ideal_function_found = c
+                    max_distance = temp_max_distance
                     #print('sum of squared distance is: ', sum_of_squared_distances)
                     #print('ideal function found: ' + c)
                 else:
@@ -119,9 +124,11 @@ class DataSet:
                     if least_squared_distance > sum_of_squared_distances:
                         least_squared_distance = sum_of_squared_distances
                         ideal_function_found = c
+                        max_distance = temp_max_distance
                         #print('sum of squared distance is: ', sum_of_squared_distances)
                         #print('ideal function found: ' + c)
-        return ideal_function_found
+        return_value = {"ideal_function_found": ideal_function_found, "max_distance": max_distance}
+        return return_value
 
     def write_to_database(self, engine):
         try:

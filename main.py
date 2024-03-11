@@ -62,7 +62,9 @@ def main(argv):
         if c != 'x':
             print('train data checking column: ' + c)
             y_column = train_dataframe[c].tolist()
-            print('Ideal Function for ' + c + ' seems to be ' + ideal_data_set.compare_function(y_column))
+            result = ideal_data_set.compare_function(y_column)
+            print('Ideal Function for ' + c + ' seems to be ' + result["ideal_function_found"]
+                  + ' with the maximum distance ', result['max_distance'])
     y_column = train_dataframe['y1'].tolist()
     ideal_data_set.visualize_comparing_functions('y36', y_column, 'TrainData y1')
 
