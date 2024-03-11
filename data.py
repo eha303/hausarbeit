@@ -35,6 +35,7 @@ def load_data_from_file(filename):
 
 class DataSet:
     def __init__(self, name, filename):
+        self.database_success = True
         self.name = name
         self.filename = filename
         self.dataframe = load_data_from_file(filename)
@@ -67,8 +68,8 @@ class DataSet:
             logger.error("Procedure Name: %s", procedure_name)
             logger.error("Line Code: %s", line_code)
 
-    def visualize_data(self, x, y):
-        x_list = self.dataframe[x].tolist()
+    def visualize_function(self, y):
+        x_list = self.dataframe['x'].tolist()
         y_list = self.dataframe[y].tolist()
         style.use('ggplot')
         fig, ax = plt.subplots(figsize=(10, 6))
@@ -81,11 +82,46 @@ class DataSet:
     def get_dataframe(self):
         return self.dataframe
 
+    def compare_function(self, y_values):
+        ideal_function_found = None
+        # get the column names of this dataframe
+        dataframe_columns = list(self.dataframe.columns.values)
+        # it is expected that every dataframe has a x-axis column named 'x'
+        # which value-range is identical to the submitted y_values
+        # iterate through every y-column in this dataframe
+        # and compare it to the submitted y_values,
+        # calculate the distance between the points, square this and sum all
+        # squared distances. if the sum of the squared distances is smaller
+        # than the previous one, store this function as the probably best
+        # fitting one.
+        least_squared_distance = 0
+        for c in dataframe_columns:
+            sum_of_squared_distances = 0
+            if c != 'x':
+                #print('now checking ' + c)
+                y_column = self.dataframe[c].tolist()
+                i = 0
+                while i < len(y_column):
+                    distance = y_column[i] - y_values[i]
+                    squared_distance = distance * distance
+                    sum_of_squared_distances += squared_distance
+                    i += 1
 
-class DataSetWithDatabaseFunctions(DataSet):
-    def __init__(self, name, filename):
-        DataSet.__init__(self, name, filename)
-        self.database_success = True
+                if least_squared_distance == 0:
+                    #print('_least squared distance is actually: ', least_squared_distance)
+                    least_squared_distance = sum_of_squared_distances
+                    ideal_function_found = c
+                    #print('sum of squared distance is: ', sum_of_squared_distances)
+                    #print('ideal function found: ' + c)
+                else:
+                    #print('least squared distance is actually: ', least_squared_distance)
+                    #print('actual sum of least squared distance is: ', sum_of_squared_distances)
+                    if least_squared_distance > sum_of_squared_distances:
+                        least_squared_distance = sum_of_squared_distances
+                        ideal_function_found = c
+                        #print('sum of squared distance is: ', sum_of_squared_distances)
+                        #print('ideal function found: ' + c)
+        return ideal_function_found
 
     def write_to_database(self, engine):
         try:
@@ -111,3 +147,20 @@ class DataSetWithDatabaseFunctions(DataSet):
 
         finally:
             return self.database_success
+
+
+class IdealDataSet(DataSet):
+    def __init__(self, name, filename):
+        DataSet.__init__(self, name, filename)
+
+    def visualize_comparing_functions(self, y_function, y_values, name_of_comparing_function):
+        x_list = self.dataframe['x'].tolist()
+        y_list = self.dataframe[y_function].tolist()
+        style.use('ggplot')
+        fig, ax = plt.subplots(figsize=(10, 6))
+        ax.plot(x_list, y_list, label=self.name + ' ' + y_function, linewidth=2)
+        ax.plot(x_list, y_values, label=name_of_comparing_function, linewidth=2)
+        ax.legend()
+        ax.grid(True, color="k")
+        plt.title(self.name + y_function + ' and ' + name_of_comparing_function)
+        plt.show()

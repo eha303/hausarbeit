@@ -716,3 +716,59 @@ ERROR:__main__:File Name: C:\Users\eha\PycharmProjects\Hausarbeit\data.py
 ERROR:__main__:Line Number: 52
 ERROR:__main__:Procedure Name: __init__
 ERROR:__main__:Line Code: raise InvalidDataFileError
+ERROR:__main__:Exception Datetime: 11-03-2024 04:32:32 PM
+ERROR:__main__:Exception Type: <class 'exceptions.InvalidDataFileError'>
+ERROR:__main__:Exception Value: 
+ERROR:__main__:Message Value: The specified data file was not found or does not contain valid data.
+ERROR:__main__:File Name: C:\Users\eha\PycharmProjects\Hausarbeit\data.py
+ERROR:__main__:Line Number: 52
+ERROR:__main__:Procedure Name: __init__
+ERROR:__main__:Line Code: raise InvalidDataFileError
+ERROR:__main__:Exception Datetime: 11-03-2024 04:32:40 PM
+ERROR:__main__:Exception Type: <class 'exceptions.InvalidDataFileError'>
+ERROR:__main__:Exception Value: 
+ERROR:__main__:Message Value: The specified data file was not found or does not contain valid data.
+ERROR:__main__:File Name: C:\Users\eha\PycharmProjects\Hausarbeit\data.py
+ERROR:__main__:Line Number: 52
+ERROR:__main__:Procedure Name: __init__
+ERROR:__main__:Line Code: raise InvalidDataFileError
+ERROR:__main__:Exception Datetime: 11-03-2024 04:32:49 PM
+ERROR:__main__:Exception Type: <class 'exceptions.InvalidDataFileError'>
+ERROR:__main__:Exception Value: 
+ERROR:__main__:Message Value: The specified data file was not found or does not contain valid data.
+ERROR:__main__:File Name: C:\Users\eha\PycharmProjects\Hausarbeit\data.py
+ERROR:__main__:Line Number: 52
+ERROR:__main__:Procedure Name: __init__
+ERROR:__main__:Line Code: raise InvalidDataFileError
+ERROR:__main__:Exception Datetime: 11-03-2024 04:33:09 PM
+ERROR:__main__:Exception Type: <class 'exceptions.InvalidDataFileError'>
+ERROR:__main__:Exception Value: 
+ERROR:__main__:Message Value: The specified data file was not found or does not contain valid data.
+ERROR:__main__:File Name: C:\Users\eha\PycharmProjects\Hausarbeit\data.py
+ERROR:__main__:Line Number: 52
+ERROR:__main__:Procedure Name: __init__
+ERROR:__main__:Line Code: raise InvalidDataFileError
+ERROR:__main__:Exception Datetime: 11-03-2024 04:33:20 PM
+ERROR:__main__:Exception Type: <class 'exceptions.InvalidDataFileError'>
+ERROR:__main__:Exception Value: 
+ERROR:__main__:Message Value: The specified data file was not found or does not contain valid data.
+ERROR:__main__:File Name: C:\Users\eha\PycharmProjects\Hausarbeit\data.py
+ERROR:__main__:Line Number: 52
+ERROR:__main__:Procedure Name: __init__
+ERROR:__main__:Line Code: raise InvalidDataFileError
+ERROR:__main__:Exception Datetime: 11-03-2024 04:33:28 PM
+ERROR:__main__:Exception Type: <class 'exceptions.InvalidDataFileError'>
+ERROR:__main__:Exception Value: 
+ERROR:__main__:Message Value: The specified data file was not found or does not contain valid data.
+ERROR:__main__:File Name: C:\Users\eha\PycharmProjects\Hausarbeit\data.py
+ERROR:__main__:Line Number: 52
+ERROR:__main__:Procedure Name: __init__
+ERROR:__main__:Line Code: raise InvalidDataFileError
+ERROR:__main__:Exception Datetime: 11-03-2024 04:46:56 PM
+ERROR:__main__:Exception Type: <class 'exceptions.InvalidDataFileError'>
+ERROR:__main__:Exception Value: 
+ERROR:__main__:Message Value: The specified data file was not found or does not contain valid data.
+ERROR:__main__:File Name: C:\Users\eha\PycharmProjects\Hausarbeit\data.py
+ERROR:__main__:Line Number: 52
+ERROR:__main__:Procedure Name: __init__
+ERROR:__main__:Line Code: raise InvalidDataFileError
