@@ -7,6 +7,7 @@ from data import IdealDataSet
 
 
 def main(argv):
+    # start
     # configure logging
     logging.basicConfig(filename="error.log", filemode="a")
     # define data files
