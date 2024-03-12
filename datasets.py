@@ -251,6 +251,15 @@ class IdealDataSet(DataSet):
         """
         DataSet.__init__(self, name, filename)
 
+    def get_ideal_function_by_name(self, name):
+        """
+        returns a dataframe with the specified function
+        :param name: name of the function that should be returned in a dataframe
+        :return: the dataframe with the specified name
+        """
+        data = [self.dataframe['x'].tolist(), self.dataframe[name].tolist()]
+        return pd.DataFrame(data, columns=['x', 'y'])
+
     def visualize_comparing_functions(self, y_function, y_values, name_of_comparing_function):
         """
         this method expects the name of an ideal functions the objects has in its dataframe
@@ -367,6 +376,7 @@ class TestDataSet(DataSet):
                 x = self.dataframe.loc[i, 'x']
                 y = self.dataframe.loc[i, 'y']
                 # find matching x value in ideal function
+                # conditions in loc-method - does this work? ***eha
                 ideal_row = function.loc[function['x'] == x]
                 # calculate distance between y coordinates
                 distance = ideal_row['y'] - y
