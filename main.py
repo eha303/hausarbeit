@@ -83,6 +83,12 @@ def main(argv):
         max_distance = ideal_function['MaxDistance']
         test_data_set.check_coordinates_against_function(ideal_data_set.get_ideal_function_by_name(
             name_of_ideal_function), name_of_ideal_function, max_distance)
+
+        test_data_set.visualize_test_data_with_ideal_function(
+            ideal_data_set.get_ideal_function_by_name(name_of_ideal_function), name_of_ideal_function)
+
+    print(test_data_set.get_dataframe())
+    test_data_set.visualize_test_data_without_assignment()
     # y_column = train_dataframe['y1'].tolist()
     # ideal_data_set.visualize_comparing_functions('y36', y_column, 'TrainData y1')
 
