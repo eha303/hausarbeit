@@ -2,7 +2,6 @@ import logging
 import math
 import traceback
 from datetime import datetime
-
 import pandas
 from matplotlib import pyplot as plt
 from matplotlib import style

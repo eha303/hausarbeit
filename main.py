@@ -2,7 +2,7 @@ import sys
 import getopt
 import logging
 from database import SQLiteDataBase
-import data
+import datasets
 
 
 def main(argv):
@@ -46,9 +46,9 @@ def main(argv):
     # initialize sqlite database
     my_db = SQLiteDataBase(database_file)
     # create datasets
-    test_data_set = data.TestDataSet('TestData', test_data_file)
-    ideal_data_set = data.IdealDataSet('IdealData', ideal_data_file)
-    train_data_set = data.DataSet('TrainData', train_data_file)
+    test_data_set = datasets.TestDataSet('TestData', test_data_file)
+    ideal_data_set = datasets.IdealDataSet('IdealData', ideal_data_file)
+    train_data_set = datasets.DataSet('TrainData', train_data_file)
     # write ideal dataset to database
     ideal_db_success = ideal_data_set.write_to_database(my_db.engine)
     if ideal_db_success:
