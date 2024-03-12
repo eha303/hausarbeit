@@ -257,8 +257,8 @@ class IdealDataSet(DataSet):
         :param name: name of the function that should be returned in a dataframe
         :return: the dataframe with the specified name
         """
-        data = [self.dataframe['x'].tolist(), self.dataframe[name].tolist()]
-        return pd.DataFrame(data, columns=['x', 'y'])
+        data = {'x': self.dataframe['x'].tolist(), 'y': self.dataframe[name].tolist()}
+        return pd.DataFrame(data)
 
     def visualize_comparing_functions(self, y_function, y_values, name_of_comparing_function):
         """
@@ -379,7 +379,7 @@ class TestDataSet(DataSet):
                 # conditions in loc-method - does this work? ***eha
                 ideal_row = function.loc[function['x'] == x]
                 # calculate distance between y coordinates
-                distance = ideal_row['y'] - y
+                distance = ideal_row.iat[0, 1] - y
                 # if the distance between the two points is not greater
                 # than the maximum distance multiplied by sqrt(2), the
                 # point should be assigned to be on the ideal function

@@ -13,8 +13,10 @@ def main(argv):
     writes everything to database
     :param argv: command line options could be:
      -t <testdatafile> -r <traindatafile> -i <idealdatafile> -d <databasefile>
-    :return:
+    :return: None
     """
+    # the ideal functions found are stored here:
+    ideal_functions_found = []
     # configure logging
     logging.basicConfig(filename="error.log", filemode="a")
     # define data files if not overriden by command line option
@@ -44,39 +46,45 @@ def main(argv):
         elif opt in ("-d", "--database"):
             database_file = arg
     # initialize sqlite database
-    my_db = SQLiteDataBase(database_file)
+    db = SQLiteDataBase(database_file)
     # create datasets
     test_data_set = datasets.TestDataSet('TestData', test_data_file)
     ideal_data_set = datasets.IdealDataSet('IdealData', ideal_data_file)
     train_data_set = datasets.DataSet('TrainData', train_data_file)
     # write ideal dataset to database
-    ideal_db_success = ideal_data_set.write_to_database(my_db.engine)
+    ideal_db_success = ideal_data_set.write_to_database(db.engine)
     if ideal_db_success:
         print("Ideal Data stored in Database.")
     else:
         print("ERROR: Ideal Data NOT stored in Database. See error.log for more details.")
     # write train dataset to database
-    train_db_success = train_data_set.write_to_database(my_db.engine)
+    train_db_success = train_data_set.write_to_database(db.engine)
     if train_db_success:
         print("Train Data stored in Database.")
     else:
         print("ERROR: Train Data NOT stored in Database. See error.log for more details.")
-    # train_data_set.visualize_data('x', 'y4')
     train_dataframe = train_data_set.get_dataframe()
-    x_column = train_dataframe['x'].tolist()
+
     train_data_columns = list(train_dataframe.columns.values)
     for c in train_data_columns:
         if c != 'x':
-            print('train data checking column: ' + c)
+            print('Train Data checking column: ' + c)
             y_column = train_dataframe[c].tolist()
             result = ideal_data_set.compare_function(y_column)
-            print(result)
             ideal_function_found = result['ideal_function_found']
             max_distance = result['max_distance']
             print('Ideal Function for ' + c + ' seems to be ' + ideal_function_found
                   + ' with the maximum distance ', max_distance)
-    y_column = train_dataframe['y1'].tolist()
-    ideal_data_set.visualize_comparing_functions('y36', y_column, 'TrainData y1')
+            ideal_functions_found.append({"TrainFunction": c,
+                                          "IdealFunction": ideal_function_found,
+                                          "MaxDistance": max_distance})
+    for ideal_function in ideal_functions_found:
+        name_of_ideal_function = ideal_function['IdealFunction']
+        max_distance = ideal_function['MaxDistance']
+        test_data_set.check_coordinates_against_function(ideal_data_set.get_ideal_function_by_name(
+            name_of_ideal_function), name_of_ideal_function, max_distance)
+    # y_column = train_dataframe['y1'].tolist()
+    # ideal_data_set.visualize_comparing_functions('y36', y_column, 'TrainData y1')
 
 
 if __name__ == "__main__":
