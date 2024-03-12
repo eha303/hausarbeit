@@ -2,19 +2,26 @@ import sys
 import getopt
 import logging
 from database import SQLiteDataBase
-from data import DataSet
-from data import IdealDataSet
+import data
 
 
 def main(argv):
-    # start
+    """
+    this program reads train, test and ideal data
+    finds the best ideal functions for the functions in the train data
+    checks the test data to assign it to the found ideal functions
+    writes everything to database
+    :param argv: command line options could be:
+     -t <testdatafile> -r <traindatafile> -i <idealdatafile> -d <databasefile>
+    :return:
+    """
     # configure logging
     logging.basicConfig(filename="error.log", filemode="a")
-    # define data files
+    # define data files if not overriden by command line option
     train_data_file = 'train.csv'
     test_data_file = 'test.csv'
     ideal_data_file = 'ideal.csv'
-    # define database file
+    # define database file if not overriden by command line option
     database_file = '/database/sqlitedatabase.db'
     # check command line options for alternative database and data files
     try:
@@ -39,9 +46,9 @@ def main(argv):
     # initialize sqlite database
     my_db = SQLiteDataBase(database_file)
     # create datasets
-    test_data_set = DataSet('TestData', test_data_file)
-    ideal_data_set = IdealDataSet('IdealData', ideal_data_file)
-    train_data_set = DataSet('TrainData', train_data_file)
+    test_data_set = data.TestDataSet('TestData', test_data_file)
+    ideal_data_set = data.IdealDataSet('IdealData', ideal_data_file)
+    train_data_set = data.DataSet('TrainData', train_data_file)
     # write ideal dataset to database
     ideal_db_success = ideal_data_set.write_to_database(my_db.engine)
     if ideal_db_success:
