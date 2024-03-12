@@ -1,15 +1,23 @@
 import logging
+import math
 import traceback
 from datetime import datetime
+
+import pandas
 from matplotlib import pyplot as plt
 from matplotlib import style
 import pandas as pd
 from sys import exc_info
-from exceptions import InvalidDataFileError, InvalidFunctionDataError
+from exceptions import InvalidDataFileError, InvalidFunctionDataError, InvalidDataFrameError
 
 
 # does not need to be a class-method as it is static
 def load_data_from_file(filename):
+    """
+    static function that loads data from a file, generates a dataframe and returns it
+    :param filename: the filename with the data to load
+    :return: dataframe with the data loaded from the file
+    """
     try:
         # try to load data into dataframe and return it
         dat: pd.DataFrame = pd.read_csv(filename)
@@ -34,7 +42,18 @@ def load_data_from_file(filename):
 
 
 class DataSet:
+    """
+    This Class contains the dataframe with the function data
+    and methods to compare this function data against other
+    data, visualize functions and store data to database
+    """
+
     def __init__(self, name, filename):
+        """
+        expects the name of the dataset and the filename with the data to load
+        :param name: name of the dataset
+        :param filename: name of the file that contains the data that should be loaded
+        """
         self.database_success = True
         self.name = name
         self.filename = filename
@@ -44,6 +63,7 @@ class DataSet:
         # exception already thrown in static method load_data_from_file
         if self.dataframe is None:
             print(filename + ' not found. No Data has been loaded.')
+            print('See error.log for more details about that.')
         # if data could not been loaded correctly from file because no correct
         # data was in the specified file, raise an other exception.
         try:
@@ -69,6 +89,11 @@ class DataSet:
             logger.error("Line Code: %s", line_code)
 
     def visualize_function(self, y):
+        """
+        renders a plot of the function
+        :param y: name of the function in the dataframe [e.g. 'y1'] that should be visualized
+        :return: None
+        """
         x_list = self.dataframe['x'].tolist()
         y_list = self.dataframe[y].tolist()
         style.use('ggplot')
@@ -80,6 +105,10 @@ class DataSet:
         plt.show()
 
     def get_dataframe(self):
+        """
+        returns the dataframe containing the functions
+        :return: the dataframe
+        """
         return self.dataframe
 
     def compare_function(self, y_values):
@@ -143,7 +172,7 @@ class DataSet:
                 sum_of_squared_distances = 0
                 temp_max_distance = 0
                 if c != 'x':
-                    #print('now checking ' + c)
+                    # print('now checking ' + c)
                     y_column = self.dataframe[c].tolist()
                     i = 0
                     while i < len(y_column):
@@ -155,21 +184,21 @@ class DataSet:
                         i += 1
 
                     if least_squared_distance == 0:
-                        #print('_least squared distance is actually: ', least_squared_distance)
+                        # print('_least squared distance is actually: ', least_squared_distance)
                         least_squared_distance = sum_of_squared_distances
                         ideal_function_found = c
                         max_distance = temp_max_distance
-                        #print('sum of squared distance is: ', sum_of_squared_distances)
-                        #print('ideal function found: ' + c)
+                        # print('sum of squared distance is: ', sum_of_squared_distances)
+                        # print('ideal function found: ' + c)
                     else:
-                        #print('least squared distance is actually: ', least_squared_distance)
-                        #print('actual sum of least squared distance is: ', sum_of_squared_distances)
+                        # print('least squared distance is actually: ', least_squared_distance)
+                        # print('actual sum of least squared distance is: ', sum_of_squared_distances)
                         if least_squared_distance > sum_of_squared_distances:
                             least_squared_distance = sum_of_squared_distances
                             ideal_function_found = c
                             max_distance = temp_max_distance
-                            #print('sum of squared distance is: ', sum_of_squared_distances)
-                            #print('ideal function found: ' + c)
+                            # print('sum of squared distance is: ', sum_of_squared_distances)
+                            # print('ideal function found: ' + c)
             return_value = {"ideal_function_found": ideal_function_found, "max_distance": max_distance}
             return return_value
 
@@ -207,7 +236,20 @@ class DataSet:
 
 
 class IdealDataSet(DataSet):
+    """
+    Enhances the class DataSet by a method called
+    visualize_comparing_functions so that two functions
+    could be rendered in one plot. This is useful for
+    the IdealData to compare real data against it.
+    This is also why this class is called IdealDataSet
+    """
+
     def __init__(self, name, filename):
+        """
+        expects the name of the dataset and the filename with the data to load
+        :param name: name of the dataset
+        :param filename: name of the file that contains the data that should be loaded
+        """
         DataSet.__init__(self, name, filename)
 
     def visualize_comparing_functions(self, y_function, y_values, name_of_comparing_function):
@@ -262,3 +304,88 @@ class IdealDataSet(DataSet):
             ax.grid(True, color="k")
             plt.title(self.name + ' ' + y_function + ' and ' + name_of_comparing_function)
             plt.show()
+
+
+class TestDataSet(DataSet):
+    """
+    Enhances the class DataSet by a method called
+    check_coordinates_against_function which checks
+    the coordinates in the dataframe against a function
+    This is useful for the TestData to compare ideal data against it.
+    This is also why this class is called TestDataSet
+    """
+
+    def __init__(self, name, filename):
+        """
+        expects the name of the dataset and the filename with the data to load
+        adds column DeltaY and IdealFunction to the dataframe and fills it with
+        0 and not_assigned
+        :param name: name of the dataset
+        :param filename: name of the file that contains the data that should be loaded
+        """
+        DataSet.__init__(self, name, filename)
+        self.dataframe['DeltaY'] = [0] * self.dataframe.shape[0]
+        self.dataframe['IdealFunction'] = ['not_assigned'] * self.dataframe.shape[0]
+
+    def check_coordinates_against_function(self, function, name, max_distance):
+        """
+        checks every coordinate in the testdata against the
+        function. if it is not more far away as the maximum
+        distance multiplied by sqrt(2), the coordinate should
+        be marked as a coordinate of the function.
+        :param function: dataframe with the function
+        :param name: name of the function
+        :param max_distance: the maximum distance that should not be exceeded
+        by the multiplication of sqrt(2)
+        :return: None
+        """
+        # check if submitted function is a dataframe
+        try:
+            if not isinstance(function, pandas.DataFrame):
+                raise InvalidDataFrameError
+
+        except InvalidDataFrameError:
+            now = datetime.now().strftime("%d-%m-%Y %I:%M:%S %p")
+            exception_type, exception_value, exception_traceback = exc_info()
+            file_name, line_number, procedure_name, line_code \
+                = traceback.extract_tb(exception_traceback)[-1]
+            # get Logging-Instance from Main Scope
+            logger = logging.getLogger('__main__')
+            logger.error("Exception Datetime: %s", now)
+            logger.error("Exception Type: %s", exception_type)
+            logger.error("Exception Value: %s", exception_value)
+            logger.error("Message Value: %s", InvalidDataFrameError().error_message)
+            logger.error("File Name: %s", file_name)
+            logger.error("Line Number: %d", line_number)
+            logger.error("Procedure Name: %s", procedure_name)
+            logger.error("Line Code: %s", line_code)
+
+        else:
+            # calculate the maximum allowed distance between the points to be a
+            # match by multiplying the maximum distance by the sqrt of two
+            max_distance_mbsqrt2 = max_distance * math.sqrt(2)
+            for i in self.dataframe.index:
+                x = self.dataframe.loc[i, 'x']
+                y = self.dataframe.loc[i, 'y']
+                # find matching x value in ideal function
+                ideal_row = function.loc[function['x'] == x]
+                # calculate distance between y coordinates
+                distance = ideal_row['y'] - y
+                # if the distance between the two points is not greater
+                # than the maximum distance multiplied by sqrt(2), the
+                # point should be assigned to be on the ideal function
+                if distance <= max_distance_mbsqrt2:
+                    # check if coordinate is not yet assigned to an ideal function
+                    if self.dataframe.loc[i, 'IdealFunction'] == 'not_assigned':
+                        # assign it and store the distance
+                        self.dataframe.loc[i, 'IdealFunction'] = name
+                        self.dataframe.loc[i, 'DeltaY'] = distance
+                    # coordinate is already assigned to an ideal function
+                    else:
+                        # check if distance is greater. if so, assign this
+                        # coordinate to the actual function. if distance is
+                        # smaller, leave it assigned to the other ideal function
+                        if self.dataframe.loc[i, 'DeltaY'] > distance:
+                            # assign it and store the distance
+                            self.dataframe.loc[i, 'IdealFunction'] = name
+                            self.dataframe.loc[i, 'DeltaY'] = distance
