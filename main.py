@@ -63,8 +63,11 @@ def main(argv):
             print('train data checking column: ' + c)
             y_column = train_dataframe[c].tolist()
             result = ideal_data_set.compare_function(y_column)
-            print('Ideal Function for ' + c + ' seems to be ' + result["ideal_function_found"]
-                  + ' with the maximum distance ', result['max_distance'])
+            print(result)
+            ideal_function_found = result['ideal_function_found']
+            max_distance = result['max_distance']
+            print('Ideal Function for ' + c + ' seems to be ' + ideal_function_found
+                  + ' with the maximum distance ', max_distance)
     y_column = train_dataframe['y1'].tolist()
     ideal_data_set.visualize_comparing_functions('y36', y_column, 'TrainData y1')
 

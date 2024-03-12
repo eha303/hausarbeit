@@ -772,3 +772,67 @@ ERROR:__main__:File Name: C:\Users\eha\PycharmProjects\Hausarbeit\data.py
 ERROR:__main__:Line Number: 52
 ERROR:__main__:Procedure Name: __init__
 ERROR:__main__:Line Code: raise InvalidDataFileError
+ERROR:__main__:Exception Datetime: 12-03-2024 03:13:39 PM
+ERROR:__main__:Exception Type: <class 'exceptions.InvalidFunctionDataError'>
+ERROR:__main__:Exception Value: 
+ERROR:__main__:Message Value: Invalid Function Data. This does not seem to be an expected list of Y-Coordinates.
+ERROR:__main__:File Name: C:\Users\eha\PycharmProjects\Hausarbeit\data.py
+ERROR:__main__:Line Number: 91
+ERROR:__main__:Procedure Name: compare_function
+ERROR:__main__:Line Code: raise InvalidFunctionDataError
+ERROR:__main__:Exception Datetime: 12-03-2024 03:15:53 PM
+ERROR:__main__:Exception Type: <class 'exceptions.InvalidFunctionDataError'>
+ERROR:__main__:Exception Value: 
+ERROR:__main__:Message Value: Invalid Function Data. This does not seem to be an expected list of Y-Coordinates.
+ERROR:__main__:File Name: C:\Users\eha\PycharmProjects\Hausarbeit\data.py
+ERROR:__main__:Line Number: 91
+ERROR:__main__:Procedure Name: compare_function
+ERROR:__main__:Line Code: raise InvalidFunctionDataError
+ERROR:__main__:Exception Datetime: 12-03-2024 03:16:11 PM
+ERROR:__main__:Exception Type: <class 'exceptions.InvalidFunctionDataError'>
+ERROR:__main__:Exception Value: 
+ERROR:__main__:Message Value: Invalid Function Data. This does not seem to be an expected list of Y-Coordinates.
+ERROR:__main__:File Name: C:\Users\eha\PycharmProjects\Hausarbeit\data.py
+ERROR:__main__:Line Number: 91
+ERROR:__main__:Procedure Name: compare_function
+ERROR:__main__:Line Code: raise InvalidFunctionDataError
+ERROR:__main__:Exception Datetime: 12-03-2024 03:17:13 PM
+ERROR:__main__:Exception Type: <class 'exceptions.InvalidFunctionDataError'>
+ERROR:__main__:Exception Value: 
+ERROR:__main__:Message Value: Invalid Function Data. This does not seem to be an expected list of Y-Coordinates.
+ERROR:__main__:File Name: C:\Users\eha\PycharmProjects\Hausarbeit\data.py
+ERROR:__main__:Line Number: 93
+ERROR:__main__:Procedure Name: compare_function
+ERROR:__main__:Line Code: raise InvalidFunctionDataError
+ERROR:__main__:Exception Datetime: 12-03-2024 03:23:00 PM
+ERROR:__main__:Exception Type: <class 'exceptions.InvalidFunctionDataError'>
+ERROR:__main__:Exception Value: 
+ERROR:__main__:Message Value: Invalid Function Data. This does not seem to be an expected list of Y-Coordinates.
+ERROR:__main__:File Name: C:\Users\eha\PycharmProjects\Hausarbeit\data.py
+ERROR:__main__:Line Number: 100
+ERROR:__main__:Procedure Name: compare_function
+ERROR:__main__:Line Code: raise InvalidFunctionDataError
+ERROR:__main__:Exception Datetime: 12-03-2024 03:23:23 PM
+ERROR:__main__:Exception Type: <class 'exceptions.InvalidFunctionDataError'>
+ERROR:__main__:Exception Value: 
+ERROR:__main__:Message Value: Invalid Function Data. This does not seem to be an expected list of Y-Coordinates.
+ERROR:__main__:File Name: C:\Users\eha\PycharmProjects\Hausarbeit\data.py
+ERROR:__main__:Line Number: 101
+ERROR:__main__:Procedure Name: compare_function
+ERROR:__main__:Line Code: raise InvalidFunctionDataError
+ERROR:__main__:Exception Datetime: 12-03-2024 03:24:19 PM
+ERROR:__main__:Exception Type: <class 'exceptions.InvalidFunctionDataError'>
+ERROR:__main__:Exception Value: 
+ERROR:__main__:Message Value: Invalid Function Data. This does not seem to be an expected list of Y-Coordinates.
+ERROR:__main__:File Name: C:\Users\eha\PycharmProjects\Hausarbeit\data.py
+ERROR:__main__:Line Number: 101
+ERROR:__main__:Procedure Name: compare_function
+ERROR:__main__:Line Code: raise InvalidFunctionDataError
+ERROR:__main__:Exception Datetime: 12-03-2024 03:24:33 PM
+ERROR:__main__:Exception Type: <class 'exceptions.InvalidFunctionDataError'>
+ERROR:__main__:Exception Value: 
+ERROR:__main__:Message Value: Invalid Function Data. This does not seem to be an expected list of Y-Coordinates.
+ERROR:__main__:File Name: C:\Users\eha\PycharmProjects\Hausarbeit\data.py
+ERROR:__main__:Line Number: 215
+ERROR:__main__:Procedure Name: visualize_comparing_functions
+ERROR:__main__:Line Code: raise InvalidFunctionDataError
