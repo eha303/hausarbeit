@@ -389,3 +389,74 @@ class TestDataSet(DataSet):
                             # assign it and store the distance
                             self.dataframe.loc[i, 'IdealFunction'] = name
                             self.dataframe.loc[i, 'DeltaY'] = distance
+
+    def visualize_test_data_with_ideal_function(self, idealfunction, name_of_ideal_function):
+        """
+        this method visualizes the test data coordinates with its assigned
+        ideal function
+        :param: idealfunction: the dataframe with the ideal function
+        :param: name_of_ideal_function: the name of the ideal function
+        :return: None
+        """
+        # check if submitted function is a dataframe
+        try:
+            if not isinstance(idealfunction, pandas.DataFrame):
+                raise InvalidDataFrameError
+
+        except InvalidDataFrameError:
+            now = datetime.now().strftime("%d-%m-%Y %I:%M:%S %p")
+            exception_type, exception_value, exception_traceback = exc_info()
+            file_name, line_number, procedure_name, line_code \
+                = traceback.extract_tb(exception_traceback)[-1]
+            # get Logging-Instance from Main Scope
+            logger = logging.getLogger('__main__')
+            logger.error("Exception Datetime: %s", now)
+            logger.error("Exception Type: %s", exception_type)
+            logger.error("Exception Value: %s", exception_value)
+            logger.error("Message Value: %s", InvalidDataFrameError().error_message)
+            logger.error("File Name: %s", file_name)
+            logger.error("Line Number: %d", line_number)
+            logger.error("Procedure Name: %s", procedure_name)
+            logger.error("Line Code: %s", line_code)
+
+        else:
+            x_list = idealfunction['x'].tolist()
+            y_list = idealfunction['y'].tolist()
+            # get all testdata coordinates assigned to the ideal function
+            test_data_x_list = []
+            test_data_y_list = []
+            for i in self.dataframe.index:
+                if self.dataframe.loc[i, 'IdealFunction'] == name_of_ideal_function:
+                    test_data_x_list.append(self.dataframe.loc[i, 'x'])
+                    test_data_y_list.append(self.dataframe.loc[i, 'y'])
+            # render it
+            style.use('ggplot')
+            fig, ax = plt.subplots(figsize=(10, 6))
+            ax.plot(x_list, y_list, label='Ideal Function ' + name_of_ideal_function, linewidth=2)
+            ax.plot(test_data_x_list, test_data_y_list, 'bo', label='Test Data')
+            ax.legend()
+            ax.grid(True, color="k")
+            plt.title('Test Data assigned to Ideal Function ' + name_of_ideal_function)
+            plt.show()
+
+    def visualize_test_data_without_assignment(self):
+        """
+        this method visualizes the test data coordinates
+        that could not be assigned to an ideal function
+        :return: None
+        """
+        # get all testdata coordinates with no assignment
+        test_data_x_list = []
+        test_data_y_list = []
+        for i in self.dataframe.index:
+            if self.dataframe.loc[i, 'IdealFunction'] == 'not_assigned':
+                test_data_x_list.append(self.dataframe.loc[i, 'x'])
+                test_data_y_list.append(self.dataframe.loc[i, 'y'])
+        # render it
+        style.use('ggplot')
+        fig, ax = plt.subplots(figsize=(10, 6))
+        ax.plot(test_data_x_list, test_data_y_list, 'bo', label='Test Data')
+        ax.legend()
+        ax.grid(True, color="k")
+        plt.title('Test Data with no assignment to an Ideal Function')
+        plt.show()
