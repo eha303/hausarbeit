@@ -205,7 +205,7 @@ class DataSet:
         """
         writes the dataframe to database
         and returns True if writing to database was successful
-        or False of something went wrong
+        or False when something went wrong
         :param engine: the database-engine
         :return: Success
         """
@@ -371,24 +371,33 @@ class TestDataSet(DataSet):
         else:
             # calculate the maximum allowed distance between the points to be a
             # match by multiplying the maximum distance by the sqrt of two
-            max_distance_mbsqrt2 = max_distance * math.sqrt(2)
+            max_distance_mbsqrt2 = abs(max_distance) * math.sqrt(2)
             for i in self.dataframe.index:
                 x = self.dataframe.loc[i, 'x']
                 y = self.dataframe.loc[i, 'y']
+                print('TestX: ', x)
+                print('TestY: ', y)
                 # find matching x value in ideal function
                 # conditions in loc-method - does this work? ***eha
                 ideal_row = function.loc[function['x'] == x]
+                print('IdealRow:')
+                print(ideal_row)
                 # calculate distance between y coordinates
                 distance = ideal_row.iat[0, 1] - y
+                print('calculate distance: ', ideal_row.iat[0,1], ' - ', y)
+                print('distance: ', distance)
+                print('max_distance_mbsqrt2: ', max_distance_mbsqrt2)
                 # if the distance between the two points is not greater
                 # than the maximum distance multiplied by sqrt(2), the
                 # point should be assigned to be on the ideal function
-                if distance <= max_distance_mbsqrt2:
+                if abs(distance) <= max_distance_mbsqrt2:
+                    print('distance seems to be smaller')
                     # check if coordinate is not yet assigned to an ideal function
                     if self.dataframe.loc[i, 'IdealFunction'] == 'not_assigned':
                         # assign it and store the distance
+                        print('testcoordindate is not assigned yet, so assign it')
                         self.dataframe.loc[i, 'IdealFunction'] = name
-                        self.dataframe.loc[i, 'DeltaY'] = distance
+                        self.dataframe.loc[i, 'DeltaY'] = abs(distance)
                     # coordinate is already assigned to an ideal function
                     else:
                         # check if distance is greater. if so, assign this
@@ -396,8 +405,10 @@ class TestDataSet(DataSet):
                         # smaller, leave it assigned to the other ideal function
                         if self.dataframe.loc[i, 'DeltaY'] > distance:
                             # assign it and store the distance
+                            print('testcoordindate assigned, deltaY is: ', self.dataframe.loc[i, 'DeltaY'])
+                            print('actual distance is ', distance, ' - so assign it!')
                             self.dataframe.loc[i, 'IdealFunction'] = name
-                            self.dataframe.loc[i, 'DeltaY'] = distance
+                            self.dataframe.loc[i, 'DeltaY'] = abs(distance)
 
     def visualize_test_data_with_ideal_function(self, idealfunction, name_of_ideal_function):
         """

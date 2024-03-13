@@ -87,8 +87,12 @@ def main(argv):
         test_data_set.visualize_test_data_with_ideal_function(
             ideal_data_set.get_ideal_function_by_name(name_of_ideal_function), name_of_ideal_function)
 
-    print(test_data_set.get_dataframe())
     test_data_set.visualize_test_data_without_assignment()
+    test_db_success = test_data_set.write_to_database(db.engine)
+    if test_db_success:
+        print("Test Data stored in Database.")
+    else:
+        print("ERROR: Test Data NOT stored in Database. See error.log for more details.")
     # y_column = train_dataframe['y1'].tolist()
     # ideal_data_set.visualize_comparing_functions('y36', y_column, 'TrainData y1')
 
