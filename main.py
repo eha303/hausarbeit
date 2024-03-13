@@ -81,7 +81,7 @@ def main(argv):
     for ideal_function in ideal_functions_found:
         name_of_ideal_function = ideal_function['IdealFunction']
         max_distance = ideal_function['MaxDistance']
-        test_data_set.check_coordinates_against_function_correct(ideal_data_set.get_ideal_function_by_name(
+        test_data_set.check_coordinates_against_function(ideal_data_set.get_ideal_function_by_name(
             name_of_ideal_function), name_of_ideal_function, max_distance)
 
         test_data_set.visualize_test_data_with_ideal_function(
