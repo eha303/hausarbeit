@@ -119,7 +119,9 @@ def main(argv):
         print("\nTest Data stored in Database.")
     else:
         print("\nERROR: Test Data NOT stored in Database. See error.log for more details.")
-    user_input= ''
+    # everything is calculated and written to database
+    # show the command line menu
+    user_input = ''
     while user_input != 'Q':
         print('\n')
         print('[1] - Visualize the found ideal functions')
