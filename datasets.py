@@ -60,13 +60,15 @@ class DataSet:
         # check if something went wrong.
         # if data file could not been found, print a notice about that.
         # exception already thrown in static method load_data_from_file
-        if self.dataframe is None:
+        if isinstance(self.dataframe, pandas.DataFrame):
+            print('CRITICAL ERROR:')
             print(filename + ' not found. No Data has been loaded.')
             print('See error.log for more details about that.')
         # if data could not been loaded correctly from file because no correct
         # data was in the specified file, raise an other exception.
         try:
             if len(self.dataframe.columns) < 2:
+                print('ERROR:')
                 print(filename + ' does not seem to be a valid data file.')
                 print('See error.log for more details about that.')
                 raise InvalidDataFileError
@@ -308,11 +310,11 @@ class IdealDataSet(DataSet):
             y_list = self.dataframe[y_function].tolist()
             style.use('ggplot')
             fig, ax = plt.subplots(figsize=(10, 6))
-            ax.plot(x_list, y_list, label=self.name + ' ' + y_function, linewidth=2)
-            ax.plot(x_list, y_values, label=name_of_comparing_function, linewidth=1)
+            ax.plot(x_list, y_list, label='Ideal Function ' + y_function, linewidth=2)
+            ax.plot(x_list, y_values, label='Train Function ' + name_of_comparing_function, linewidth=1)
             ax.legend()
             ax.grid(True, color="k")
-            plt.title(self.name + ' ' + y_function + ' and ' + name_of_comparing_function)
+            plt.title('Ideal Function ' + y_function + ' and Train Function ' + name_of_comparing_function)
             plt.show()
 
 
