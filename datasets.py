@@ -10,7 +10,7 @@ from sys import exc_info
 from exceptions import InvalidDataFileError, InvalidFunctionDataError, InvalidDataFrameError
 
 
-# does not need to be a class-method as it is static
+# this function does not need to be a class-method as it is static
 def load_data_from_file(filename):
     """
     static function that loads data from a file, generates a dataframe and returns it
@@ -112,13 +112,14 @@ class DataSet:
 
     def compare_function(self, y_values):
         """
-        compares the function submitted by the parameter y_values against all functions
+        compares the function submitted in parameter y_values against all functions
         in the dataframe, calculate the distance between the points, square this and sum
         all squared distances. the function that has the smallest value is recognized as
         the probably best fitting one and the name of the function will be returned
         together with the distance of the point that had the maximum distance from
         a point from the function in parameter y_values
-        :param y_values: the function that should be compared to any other function in this dataframe
+        :param y_values: the function in y_values in a simple list that should be
+         compared to any other function in this dataframe
         :return: A Dictionary with the ideal_function_found and the max_distance
         """
         # check if submitted y_values is a list of float values as expected
@@ -158,7 +159,7 @@ class DataSet:
             # get the column names of this dataframe
             dataframe_columns = list(self.dataframe.columns.values)
             # it is expected that every dataframe has a x-axis column named 'x'
-            # which value-range is identical to the submitted y_values
+            # which value-range is identical to the submitted list of y_values
             # iterate through every y-column in this dataframe
             # and compare it to the submitted y_values,
             # calculate the distance between the points, square this and sum all
@@ -171,7 +172,7 @@ class DataSet:
                 sum_of_squared_distances = 0
                 temp_max_distance = 0
                 if c != 'x':
-                    # print('now checking ' + c)
+                    # c is now the column-name of the function to be checked
                     y_column = self.dataframe[c].tolist()
                     i = 0
                     while i < len(y_column):
@@ -181,23 +182,24 @@ class DataSet:
                         squared_distance = distance * distance
                         sum_of_squared_distances += squared_distance
                         i += 1
-
                     if least_squared_distance == 0:
-                        # print('_least squared distance is actually: ', least_squared_distance)
+                        # set the least_squared_distance to the actual
+                        # sum_of_squared_distances and set the so far
+                        # best fitting function to the actual checked one
+                        # which name is stored in c
                         least_squared_distance = sum_of_squared_distances
                         ideal_function_found = c
                         max_distance = temp_max_distance
-                        # print('sum of squared distance is: ', sum_of_squared_distances)
-                        # print('ideal function found: ' + c)
                     else:
-                        # print('least squared distance is actually: ', least_squared_distance)
-                        # print('actual sum of least squared distance is: ', sum_of_squared_distances)
+                        # if the least squared distance is actually greater than
+                        # the actual sum of least squared distances, set the actual
+                        # found function with the least squared distance as new best
+                        # fitting values
                         if least_squared_distance > sum_of_squared_distances:
                             least_squared_distance = sum_of_squared_distances
                             ideal_function_found = c
                             max_distance = temp_max_distance
-                            # print('sum of squared distance is: ', sum_of_squared_distances)
-                            # print('ideal function found: ' + c)
+
             return_value = {"ideal_function_found": ideal_function_found, "max_distance": max_distance}
             return return_value
 
@@ -262,7 +264,7 @@ class IdealDataSet(DataSet):
 
     def visualize_comparing_functions(self, y_function, y_values, name_of_comparing_function):
         """
-        this method expects the name of an ideal functions the objects has in its dataframe
+        this method expects the name of an ideal function the object has in its dataframe
         and another function that should be compared to the chosen ideal function.
         both functions will be visualized by rendering a matplotlib-plot
         :param y_function: the name of the ideal function in the own dataset that should be compared
@@ -375,12 +377,14 @@ class TestDataSet(DataSet):
             for i in self.dataframe.index:
                 test_x = self.dataframe.loc[i, 'x']
                 test_y = self.dataframe.loc[i, 'y']
-                # finding the matching point by comparing the x-value
-                # in the ideal data function is not correct. the point
-                # could also be close with a different x-value. so all
-                # coordinates from the ideal-function must be compared.
-                # so we have to iterate through all the points from the
-                # ideal function.
+                # finding the matching point by comparing only coordinates
+                # which have the same x-value ist not correct.
+                # a point could also be close to an ideal function with a
+                # different x-value. so all coordinates from the ideal
+                # function must be compared. so we have to iterate through
+                # all the points from the ideal function and compare it
+                # with the math.dist()-function against every coordinate
+                # from the test data.
                 for index in function.index:
                     ideal_x = function['x'][index]
                     ideal_y = function['y'][index]
