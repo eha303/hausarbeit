@@ -60,7 +60,7 @@ class DataSet:
         # check if something went wrong.
         # if data file could not been found, print a notice about that.
         # exception already thrown in static method load_data_from_file
-        if isinstance(self.dataframe, pandas.DataFrame):
+        if not isinstance(self.dataframe, pandas.DataFrame):
             print('CRITICAL ERROR:')
             print(filename + ' not found. No Data has been loaded.')
             print('See error.log for more details about that.')

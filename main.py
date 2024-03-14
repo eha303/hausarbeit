@@ -127,15 +127,15 @@ def main(argv):
         print('[1] - Visualize the found ideal functions')
         print('[2] - Visualize the found ideal functions in comparison to the train function')
         print('[3] - Visualize assigned and not assigned test data')
+        print('[4] - Visualize all ideal functions')
         print('[Q] - Quit')
-        user_input = input('Please enter [1-3] or Q to Quit: ')
+        user_input = input('Please enter [1-4] or Q to Quit: ')
         if user_input == '1':
             print('\n')
             while user_input != 'B':
                 n = 0
                 for ideal_function in ideal_functions_found:
                     n += 1
-                    n_str = str(n)
                     print('[' + str(n) + '] - Visualize the found ideal function ' + ideal_function['IdealFunction'])
                 print('[B] - go Back to main menu')
                 user_input = input('Please enter [1-' + str(n) + '] or B for Back: ')
@@ -150,7 +150,6 @@ def main(argv):
                 n = 0
                 for ideal_function in ideal_functions_found:
                     n += 1
-                    n_str = str(n)
                     print('[' + str(n) + '] - Visualize ideal function ' + ideal_function['IdealFunction'] +
                           ' and train function ' + ideal_function['TrainFunction'])
                 print('[B] - go Back to main menu')
@@ -183,6 +182,26 @@ def main(argv):
                     n += 1
                 if user_input == 'N':
                     test_data_set.visualize_test_data_without_assignment()
+        elif user_input == '4':
+            print('\n')
+            while user_input != 'B':
+                number_of_ideal_functions = len(ideal_data_set.get_dataframe().columns)
+                # decrease number_of_ideal_functions by 1 because first column in the
+                # dataframe is the x-axis
+                number_of_ideal_functions -= 1
+                print('There are ' + str(number_of_ideal_functions) + ' ideal functions.')
+                user_input = input('Please enter [1-' + str(number_of_ideal_functions) + '] or B for Back: ')
+                if user_input != 'B':
+                    try:
+                        input_value = int(user_input)
+                        if (input_value <= number_of_ideal_functions) & (input_value > 0):
+                            ideal_function_name = 'y' + str(input_value)
+                            ideal_data_set.visualize_function(ideal_function_name)
+                        else:
+                            print('Invalid Input. Please enter a number between 1 and ' + str(number_of_ideal_functions))
+                    except ValueError:
+                        print('Invalid Input. Please enter a number between 1 and ' + str(number_of_ideal_functions))
+
         elif user_input == 'Q':
             sys.exit(0)
 
