@@ -52,13 +52,13 @@ def main(argv):
             database_file = arg
             options_set = True
     print('\nUsage: main.py -t <testdatafile> -r <traindatafile> -i <idealdatafile> -d <databasefile>\n')
-    if options_set == False:
+    if not options_set:
         print('No options set. Using preset options for data files:')
     print('Testdata File: ' + test_data_file)
     print('Traindata File: ' + train_data_file)
     print('Idealdata File: ' + ideal_data_file)
     print('SQLite Database File: ' + database_file)
-    user_input = input('\nPress Enter to start reading Data Files an initialize Database.')
+    input('\nPress Enter to start reading Data Files an initialize Database.')
 
     # initialize sqlite database
     db = SQLiteDataBase(database_file)
@@ -167,7 +167,6 @@ def main(argv):
                 n = 0
                 for ideal_function in ideal_functions_found:
                     n += 1
-                    n_str = str(n)
                     print('[' + str(n) + '] - Visualize ideal function ' + ideal_function['IdealFunction'] +
                           ' and assigned Test Data')
                 print('[N] - Visualize not assigned Test Data which did not match the criteria')
@@ -198,7 +197,8 @@ def main(argv):
                             ideal_function_name = 'y' + str(input_value)
                             ideal_data_set.visualize_function(ideal_function_name)
                         else:
-                            print('Invalid Input. Please enter a number between 1 and ' + str(number_of_ideal_functions))
+                            print('Invalid Input. Please enter a number between 1 and ' +
+                                  str(number_of_ideal_functions))
                     except ValueError:
                         print('Invalid Input. Please enter a number between 1 and ' + str(number_of_ideal_functions))
 
