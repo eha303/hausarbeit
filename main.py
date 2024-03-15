@@ -6,6 +6,27 @@ from database import SQLiteDataBase
 import datasets
 
 
+def handle_exception(errormessage):
+    """
+    Handles critical exceptions and let the user decide
+    if the program should be interrupted or continued
+    :param errormessage: the errormessage from the exception that appeared
+    :return: None
+    """
+    print('ERROR:')
+    print(errormessage)
+    print('Please see error.log for more details.')
+    print('The program probably will not run correctly.')
+    print('Do you want to continue anyway?')
+    print('[Y] - Yes, continue anyway.')
+    print('[Q] - No, quit the program.')
+    user_input = ''
+    while user_input.upper() != 'Y':
+        user_input = input('Please enter Y or Q: ')
+        if user_input.upper() == 'Q':
+            sys.exit(0)
+
+
 def main(argv):
     """
     this program reads train, test and ideal data
@@ -16,7 +37,14 @@ def main(argv):
      -t <testdatafile> -r <traindatafile> -i <idealdatafile> -d <databasefile>
     :return: None
     """
-    # the ideal functions found are stored here:
+    # the data is stored in datasets which are declared here already
+    # and initialized with None, because they are initialized later
+    # on in a try-except-block, so it is unclear for the linter that
+    # they are really initialized so it shows an error.
+    ideal_data_set = None
+    train_data_set = None
+    test_data_set = None
+    # same thing with the deal functions:
     ideal_functions_found = []
     # configure logging
     logging.basicConfig(filename="error.log", filemode="a")
@@ -67,10 +95,18 @@ def main(argv):
     else:
         print('ERROR: Database could not be initialized. See error.log for more Details.')
     # create datasets
-    test_data_set = datasets.TestDataSet('TestData', test_data_file)
-    ideal_data_set = datasets.IdealDataSet('IdealData', ideal_data_file)
-    train_data_set = datasets.DataSet('TrainData', train_data_file)
-
+    try:
+        test_data_set = datasets.TestDataSet('TestData', test_data_file)
+    except FileNotFoundError:
+        handle_exception(test_data_file + " could not been found.")
+    try:
+        ideal_data_set = datasets.IdealDataSet('IdealData', ideal_data_file)
+    except FileNotFoundError:
+        handle_exception(ideal_data_file + " could not been found.")
+    try:
+        train_data_set = datasets.DataSet('TrainData', train_data_file)
+    except FileNotFoundError:
+        handle_exception(train_data_file + " could not been found.")
     # write ideal dataset to database
     ideal_db_success = ideal_data_set.write_to_database(db.engine)
     if ideal_db_success:
@@ -122,7 +158,7 @@ def main(argv):
     # everything is calculated and written to database
     # show the command line menu
     user_input = ''
-    while user_input != 'Q':
+    while user_input.upper() != 'Q':
         print('\n')
         print('[1] - Visualize the found ideal functions')
         print('[2] - Visualize the found ideal functions in comparison to the train function')
@@ -132,7 +168,7 @@ def main(argv):
         user_input = input('Please enter [1-4] or Q to Quit: ')
         if user_input == '1':
             print('\n')
-            while user_input != 'B':
+            while user_input.upper() != 'B':
                 n = 0
                 for ideal_function in ideal_functions_found:
                     n += 1
@@ -146,7 +182,7 @@ def main(argv):
                     n += 1
         elif user_input == '2':
             print('\n')
-            while user_input != 'B':
+            while user_input.upper() != 'B':
                 n = 0
                 for ideal_function in ideal_functions_found:
                     n += 1
@@ -163,7 +199,7 @@ def main(argv):
                     n += 1
         elif user_input == '3':
             print('\n')
-            while user_input != 'B':
+            while user_input.upper() != 'B':
                 n = 0
                 for ideal_function in ideal_functions_found:
                     n += 1
@@ -179,18 +215,18 @@ def main(argv):
                         test_data_set.visualize_test_data_with_ideal_function(ideal_function_df,
                                                                               ideal_function['IdealFunction'])
                     n += 1
-                if user_input == 'N':
+                if user_input.upper() == 'N':
                     test_data_set.visualize_test_data_without_assignment()
         elif user_input == '4':
             print('\n')
-            while user_input != 'B':
+            while user_input.upper() != 'B':
                 number_of_ideal_functions = len(ideal_data_set.get_dataframe().columns)
                 # decrease number_of_ideal_functions by 1 because first column in the
                 # dataframe is the x-axis
                 number_of_ideal_functions -= 1
                 print('There are ' + str(number_of_ideal_functions) + ' ideal functions.')
                 user_input = input('Please enter [1-' + str(number_of_ideal_functions) + '] or B for Back: ')
-                if user_input != 'B':
+                if user_input.upper() != 'B':
                     try:
                         input_value = int(user_input)
                         if (input_value <= number_of_ideal_functions) & (input_value > 0):
@@ -202,7 +238,7 @@ def main(argv):
                     except ValueError:
                         print('Invalid Input. Please enter a number between 1 and ' + str(number_of_ideal_functions))
 
-        elif user_input == 'Q':
+        elif user_input.upper() == 'Q':
             sys.exit(0)
 
 

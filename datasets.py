@@ -36,8 +36,9 @@ def load_data_from_file(filename):
         logger.error("Line Number: %d", line_number)
         logger.error("Procedure Name: %s", procedure_name)
         logger.error("Line Code: %s", line_code)
-        # return None to make clear no data has been loaded
-        return None
+        logger.error("The following file was not found: %s", filename)
+        # raise the exception again to make clear, no data was loaded
+        raise FileNotFoundError
 
 
 class DataSet:
