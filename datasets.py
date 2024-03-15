@@ -154,13 +154,13 @@ class DataSet:
             logger.error("Line Number: %d", line_number)
             logger.error("Procedure Name: %s", procedure_name)
             logger.error("Line Code: %s", line_code)
-            # return None to indicate something went wrong
-            return None
+            # raise Exception again to indicate something went wrong
+            raise InvalidFunctionDataError
 
         else:
             ideal_function_found = None
             # get the column names of this dataframe
-            dataframe_columns = list(self.dataframe.columns.values)
+            dataframe_columns = self.dataframe.columns.to_list()
             # it is expected that every dataframe has a x-axis column named 'x'
             # which value-range is identical to the submitted list of y_values
             # iterate through every y-column in this dataframe
@@ -169,7 +169,7 @@ class DataSet:
             # squared distances. if the sum of the squared distances is smaller
             # than the previous one, store this function as the probably best
             # fitting one.
-            least_squared_distance = 0
+            least_squared_distance = None
             max_distance = 0
             for c in dataframe_columns:
                 sum_of_squared_distances = 0
@@ -185,7 +185,7 @@ class DataSet:
                         squared_distance = distance * distance
                         sum_of_squared_distances += squared_distance
                         i += 1
-                    if least_squared_distance == 0:
+                    if least_squared_distance is None:
                         # set the least_squared_distance to the actual
                         # sum_of_squared_distances and set the so far
                         # best fitting function to the actual checked one

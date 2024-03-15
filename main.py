@@ -4,6 +4,7 @@ import getopt
 import logging
 from database import SQLiteDataBase
 import datasets
+from exceptions import InvalidFunctionDataError
 
 
 def handle_exception(errormessage):
@@ -128,14 +129,20 @@ def main(argv):
         if c != 'x':
             print('Train data checking function: ' + c)
             y_column = train_dataframe[c].tolist()
-            result = ideal_data_set.compare_function(y_column)
-            ideal_function_found = result['ideal_function_found']
-            max_distance = result['max_distance']
-            print('Best fitting ideal function for train data function ' + c + ' is ' + ideal_function_found)
-            print('with the maximum distance between two points of ', max_distance)
-            ideal_functions_found.append({"TrainFunction": c,
-                                          "IdealFunction": ideal_function_found,
-                                          "MaxDistance": max_distance})
+            try:
+                result = ideal_data_set.compare_function(y_column)
+            except InvalidFunctionDataError:
+                print('ERROR:')
+                print('Invalid Function Data was submitted to compare_function. This should not happen!')
+                print('With invalid Data, no best fitting ideal function can be found!')
+            else:
+                ideal_function_found = result['ideal_function_found']
+                max_distance = result['max_distance']
+                print('Best fitting ideal function for train data function ' + c + ' is ' + ideal_function_found)
+                print('with the maximum distance between two points of ', max_distance)
+                ideal_functions_found.append({"TrainFunction": c,
+                                              "IdealFunction": ideal_function_found,
+                                              "MaxDistance": max_distance})
     # now check every coordinate in the Test Data and assign it
     # to a found ideal function if the test data coordinate is not
     # more far away than sqrt(2) * max_distance of the point most far
