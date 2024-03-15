@@ -2,9 +2,12 @@ import math
 import sys
 import getopt
 import logging
+
+from sqlalchemy.exc import ArgumentError
+
 from database import SQLiteDataBase
 import datasets
-from exceptions import InvalidFunctionDataError
+from exceptions import InvalidFunctionDataError, InvalidDataFileError
 
 
 def handle_exception(errormessage):
@@ -90,7 +93,12 @@ def main(argv):
     input('\nPress Enter to start reading Data Files an initialize Database.')
 
     # initialize sqlite database
-    db = SQLiteDataBase(database_file)
+    db = None
+    try:
+        db = SQLiteDataBase(database_file)
+    except ArgumentError:
+        print('ERROR: Database could not be initialized. See error.log for more Details.')
+    # check if this worked out
     if isinstance(db, SQLiteDataBase):
         print('Database initialized successfully.')
     else:
@@ -98,16 +106,16 @@ def main(argv):
     # create datasets
     try:
         test_data_set = datasets.TestDataSet('TestData', test_data_file)
-    except FileNotFoundError:
-        handle_exception(test_data_file + " could not been found.")
+    except (FileNotFoundError, InvalidDataFileError):
+        handle_exception(test_data_file + " could not been found or contains invalid data.")
     try:
         ideal_data_set = datasets.IdealDataSet('IdealData', ideal_data_file)
-    except FileNotFoundError:
-        handle_exception(ideal_data_file + " could not been found.")
+    except (FileNotFoundError, InvalidDataFileError):
+        handle_exception(ideal_data_file + " could not been found or contains invalid data.")
     try:
         train_data_set = datasets.DataSet('TrainData', train_data_file)
-    except FileNotFoundError:
-        handle_exception(train_data_file + " could not been found.")
+    except (FileNotFoundError, InvalidDataFileError):
+        handle_exception(train_data_file + " could not been found or contains invalid data.")
     # write ideal dataset to database
     ideal_db_success = ideal_data_set.write_to_database(db.engine)
     if ideal_db_success:

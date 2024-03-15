@@ -46,3 +46,11 @@ ERROR:__main__:Line Number: 859
 ERROR:__main__:Procedure Name: get_handle
 ERROR:__main__:Line Code: handle = open(
 ERROR:__main__:The following file was not found: thisfiledoesnotexist.csv
+ERROR:__main__:Exception Datetime: 15-03-2024 11:17:00 AM
+ERROR:__main__:Exception Type: <class 'FileNotFoundError'>
+ERROR:__main__:Exception Value: [Errno 2] No such file or directory: 'thisfiledoesnotexist.csv'
+ERROR:__main__:File Name: C:\Users\eha\.conda\envs\Hausarbeit\lib\site-packages\pandas\io\common.py
+ERROR:__main__:Line Number: 859
+ERROR:__main__:Procedure Name: get_handle
+ERROR:__main__:Line Code: handle = open(
+ERROR:__main__:The following file was not found: thisfiledoesnotexist.csv

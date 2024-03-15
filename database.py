@@ -3,6 +3,7 @@ import logging
 import traceback
 from datetime import datetime
 from sys import exc_info
+from sqlalchemy.exc import ArgumentError
 
 
 class SQLiteDataBase:
@@ -10,6 +11,7 @@ class SQLiteDataBase:
     Initializes a SQLite Database Connection and Engine
     with the given Database File
     """
+
     def __init__(self, database_file):
         """
         Initializes a SQLite Database Connection and Engine
@@ -20,7 +22,7 @@ class SQLiteDataBase:
             self.engine = db.create_engine('sqlite://' + database_file)
             self.connection = self.engine.connect()
 
-        except:
+        except ArgumentError:
             now = datetime.now().strftime("%d-%m-%Y %I:%M:%S %p")
             exception_type, exception_value, exception_traceback = exc_info()
             file_name, line_number, procedure_name, line_code \
@@ -34,6 +36,7 @@ class SQLiteDataBase:
             logger.error("Line Number: %d", line_number)
             logger.error("Procedure Name: %s", procedure_name)
             logger.error("Line Code: %s", line_code)
+            raise ArgumentError
 
     def insert_data(self, db_table, dataframe):
         """

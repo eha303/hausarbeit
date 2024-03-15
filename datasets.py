@@ -89,6 +89,8 @@ class DataSet:
             logger.error("Line Number: %d", line_number)
             logger.error("Procedure Name: %s", procedure_name)
             logger.error("Line Code: %s", line_code)
+            # raise InvalidDataFileError again
+            raise InvalidDataFileError
 
     def visualize_function(self, y):
         """
@@ -217,7 +219,7 @@ class DataSet:
         try:
             self.dataframe.to_sql(self.name, engine, if_exists='replace')
 
-        except ValueError:
+        except (ValueError, AttributeError):
             now = datetime.now().strftime("%d-%m-%Y %I:%M:%S %p")
             from sys import exc_info
             exception_type, exception_value, exception_traceback = exc_info()
